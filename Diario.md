@@ -35,3 +35,4 @@ O que eu fiz até ontém?
 
 O que eu farei até a próxima reunião diária?
 - Passar o prototipo das telas para o HTML
+- Criarei identidade visual
