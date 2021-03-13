@@ -20,7 +20,7 @@ O Turistando vai ser uma plataforma com o mesmo intuito de uma rede social, mas 
 
 
 ## API
--geonames.org
+- geonames.org
 
 
 ## Dependências 
@@ -34,10 +34,18 @@ O Turistando vai ser uma plataforma com o mesmo intuito de uma rede social, mas 
 ### MYSQL
 
 ### NODE JS
+$ sudo apt update
+
+$ sudo apt install nodejs
+
+$ sudo apt install npm
+
+$ nodejs -v
+
 
 
 ### Contato
-| Nome                          | Contato           
+| Nome                          | Contato                                |
 | ----------------------------- |:--------------------------------------:| 
 | Gabriela Marangoni Radigonda  | gabrielaradigonda@alunos.utfpr.edu.br  |
 | Guilherme Bernado Del Rio     | guilhermerio@alunos.utfpr.edu.br       |  
