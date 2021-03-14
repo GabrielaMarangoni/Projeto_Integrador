@@ -32,6 +32,8 @@ O Turistando vai ser uma plataforma com o mesmo intuito de uma rede social, mas 
 ## Execução
 
 ### MYSQL
+$ apt-get install mysql-server mysql-client
+
 
 ### NODE JS
 $ sudo apt update
