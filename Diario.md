@@ -36,3 +36,33 @@ O que eu fiz até ontém?
 O que eu farei até a próxima reunião diária?
 - Passar o prototipo das telas para o HTML
 - Criarei identidade visual
+
+### Reunião 3
+
+## Data: 16/03/2021
+
+Hoje na reunião foi corrigido as histórias de usuário, colocado as estimativas do planing poker em cada issue, e adicionada a primeira milestone(sprint).
+
+Participantes: Guilherme Vasco e Guilherme Rio
+
+## Gabriela 
+O que eu fiz até ontém? 
+- Adicionou informações ao README.md 
+
+O que eu farei até a próxima reunião diária?
+- Farei o prototipo inicial das telas no papel juntamente com o Guilherme Rio
+
+## Guilherme Rio
+O que eu fiz até ontém? 
+- Estudou sobre NODEJS
+
+O que eu farei até a próxima reunião diária?
+-  Farei o prototipo inicial das telas no papel juntamente com a Gabriela
+
+## Guilherme Vasco
+O que eu fiz até ontém? 
+- Estudou sobre NODEJS
+
+O que eu farei até a próxima reunião diária?
+- Passar o prototipo das telas para o HTML
+- Criarei identidade visual
