@@ -24,7 +24,7 @@ O Turistando vai ser uma plataforma com o mesmo intuito de uma rede social, mas 
 
 
 ## Dependências 
-- Bootstrap Studio
+- React-Native
 - HTML
 - CSS básico
 
