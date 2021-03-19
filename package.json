@@ -1,0 +1,19 @@
+{
+  "name": "turistando",
+  "version": "0.1.0",
+  "description": "Projeto site Turistando",
+  "main": "index.js",
+  "scripts": {
+    "test": "run test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GabrielaMarangoni/Projeto_Integrador.git"
+  },
+  "author": "Gabriela Marangoni, Guilherme Bernardo, Guilherme Vasco",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GabrielaMarangoni/Projeto_Integrador/issues"
+  },
+  "homepage": "https://github.com/GabrielaMarangoni/Projeto_Integrador#readme"
+}
