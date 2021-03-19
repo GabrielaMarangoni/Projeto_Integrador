@@ -67,6 +67,8 @@ O que eu farei até a próxima reunião diária?
 - Passar o prototipo das telas para o HTML
 - Criarei identidade visual
 
+## Reunião 4
+
 ### Data: 19/03/2021
 
 Hoje na reunião foi retrabalhado os protótipos feito usando a ferramenta Figma (https://www.figma.com/file/3XuMZWprP95zkW3TZUIIXb/Turistando?node-id=0%3A1). Decidimos, também, mudar o frontend de Boostrap Studio para React-Native. 
