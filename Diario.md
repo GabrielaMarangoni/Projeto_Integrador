@@ -66,3 +66,31 @@ O que eu fiz até ontém?
 O que eu farei até a próxima reunião diária?
 - Passar o prototipo das telas para o HTML
 - Criarei identidade visual
+
+## Data: 19/03/2021
+
+Hoje na reunião foi retrabalhado os protótipos feito usando a ferramenta Figma (https://www.figma.com/file/3XuMZWprP95zkW3TZUIIXb/Turistando?node-id=0%3A1). Decidimos, também, mudar o frontend de Boostrap Studio para React-Native. 
+
+Participantes: Gabriela, Guilherme Vasco e Guilherme Rio
+
+## Gabriela 
+O que eu fiz até ontém? 
+- Protótipos das telas
+
+O que eu farei até a próxima reunião diária?
+- Passarei os protótipos para o código
+
+## Guilherme Rio
+O que eu fiz até ontém? 
+- Estudou sobre NODEJS
+
+O que eu farei até a próxima reunião diária?
+- Passarei os protótipos para o código
+
+## Guilherme Vasco
+O que eu fiz até ontém? 
+- Estudou sobre NODEJS
+- Criou o logo
+
+O que eu farei até a próxima reunião diária?
+- Criarei o banco de dados
