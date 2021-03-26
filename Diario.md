@@ -96,3 +96,32 @@ O que eu fiz até ontém?
 
 O que eu farei até a próxima reunião diária?
 - Criarei o banco de dados
+
+## Reunião 5
+
+### Data: 26/03/2021
+
+Hoje na reunião discutimos o que faremos durante a semana.
+
+Participantes: Gabriela, Guilherme Vasco e Guilherme Rio
+
+### Gabriela 
+O que eu fiz até ontém? 
+- Implementou a tela inical do Turistando.
+
+O que eu farei até a próxima reunião diária?
+- Implementará a tela do cadastro.
+
+### Guilherme Rio
+O que eu fiz até ontém? 
+- Testou as rotas do backend no NODEJS, sem sucesso.
+
+O que eu farei até a próxima reunião diária?
+- Estudarei mais sobre as rotas do beckend.
+
+### Guilherme Vasco
+O que eu fiz até ontém? 
+- Criou o modelo do banco de dados.
+
+O que eu farei até a próxima reunião diária?
+- Estudar a aplicação do banco de dados em NODEJS.
