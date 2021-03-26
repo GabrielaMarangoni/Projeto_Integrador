@@ -1,5 +1,5 @@
-import Home from './src/pages/Home';
+import Registration from './src/pages/Registration';
 
 export function App() {
-    return <Home/>
+    return <Registration/>
 }
