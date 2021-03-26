@@ -60,6 +60,7 @@ export const LineInputs = styled.div`
 
 `;
 
+<<<<<<< HEAD
 export const LineH1 = styled.div`
     align-items: center;
     display: flex;
@@ -67,6 +68,8 @@ export const LineH1 = styled.div`
     padding-top: 70px;
 
 `;
+=======
+>>>>>>> 2cb75af1c04a86e5fd0b473d3a0185b7987d3fa6
 
 
 export const Button = styled.button`

@@ -15,5 +15,4 @@ export const Carrossel = styled.h3`
 `;
 export const CarrosselDistancia = styled.div`
     padding: 5px 300px 0 300px;
-
 `;
