@@ -16,15 +16,19 @@ const Home = () => {
     const handleUF = useCallback((estado) => {
         setState(estado)
     }, [state])
-    const handleCity = useCallback((estado) => {
-        setCity(estado)
-    }, [state])
+
+    // Essa função (Na verdade é uma constante que é interpretada como função) deve ser mudada toda vez que a cidade muda. O estado já é configurado
+    // No proprio elemento Home. 
+    // Dentro do [] precisa estar aquilo que tu está usando na função ou aquilo que a sua função depende
+    const handleCity = useCallback((city) => {
+        setCity(city)
+    }, [city])
 
 
     return (
         <Container>
             
-            <HeaderPage/>            
+            <HeaderPage home/>            
 
             <LineInputs>
                 <SelectUF onChange = {(e) => handleUF(e.target.value)} value = {state}>
