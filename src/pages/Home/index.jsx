@@ -26,7 +26,7 @@ const Home = () => {
 
 
     return (
-        <Container>
+        <>
             
             <HeaderPage home/>            
 
@@ -56,7 +56,7 @@ const Home = () => {
            <CarrosselDistancia>
             <CarrosselCorpo></CarrosselCorpo>
             </CarrosselDistancia>
-        </Container>
+       </>
     )
 }
 
