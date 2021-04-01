@@ -1,61 +1,10 @@
 import styled from 'styled-components';
 
-// Só mexer como quiser.
-// Veja que aqui eu peguei como ideia o height do logo. O valor não é o mesmo, só peguei como ideia
-export const Container = styled.div`
-  background: #40A798;
-  width: 100vw;
-  height: 100vh;
-  box-sizing: border-box;
-  padding-top: 23vh;
-
-  @media(max-width: 1024px) {
-      padding-top: 12vh;
-  }
-
-  @media(max-width: 1440px) {
-      padding-top: 14vh;
-  }
-
-  @media(max-width: 375px) {
-      padding-top: 22vh;
-  }
-`;
-
-// Aqui o fit-content significa que o height é igual ao máximo dos elementos filhos, 
-// no caso: Button e Logo
-export const Header = styled.header`
-  background: #2F4F4F;
-  width: 100vw;
-  height: fit-content;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  box-sizing: border-box;
-  position: fixed;
-  padding: 10px 10px 10px 10px;
-`;
-
-export const Logo = styled.img`
-  height: 6vh;
-  @media(max-width: 1024px){
-      height: 10vh;
-  }
-  @media(max-width: 1440px){
-      height: 12vh;
-  }
-  @media(max-width: 375px){
-      height: 20vh;
-  }
-`;
-
 export const Line = styled.div`
     align-items: center;
     display: flex;
     justify-content: center;   
     padding: 10px 10px 10px 10px;
-
 `;
 
 export const LineInput = styled.div`
@@ -65,35 +14,59 @@ export const LineInput = styled.div`
     padding: 10px 10px 10px 10px;
     display: flex;
     flex-direction: column;
-
+    float: left;
+    width: 250px;
+    margin-left: auto;
+    margin-right: auto;
 `;
 
+export const LineText = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+`;
+
+// fit-content é pra ficar tudo dentro do fundo branco idependente do tamanho da tela 
 export const ContainerBranco = styled.div`
     background: #FFF6F6;
-    width: 50vw;
-    height: 70vh;
+    width: 40vw;
+    height: fit-content;
     box-sizing: border-box;
     border-radius: 20px;
-    padding-top: 10vh;
-
+    padding-top: 5vh;
+    margin-top: 15vh;
 `;
 
 export const Label = styled.text`
     font-size: 14px;
     margin-bottom: 8px;
-
+    padding-top: 15px;
+    display: flex;
+    margin-right: auto;
+    width: fit-content;
 `;
 
-
 export const ButtonCadastrar = styled.button`
-    background: #D3D3D3;
-    height: 50px;
-    width: 160px;
+    width: 260px;
+    height: 56px;
+    background-color: #A6C89A;
     border-radius: 10px;
-    outline: none;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    margin-top: 40px;
+    -webkit-transition: background-color 400ms;
+    transition: background-color 400ms;
     font-family: Simonetta;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    align-items: center;
+    margin-block-end: 60px;
     &:hover{
-     background: #e6ffe6;
+     background: #34cb79
+;
 }`;
 
 export const InputCadastro = styled.input`
@@ -104,4 +77,26 @@ export const InputCadastro = styled.input`
     margin-right: 100px;
     margin-left: 100px;
     padding: 15px;
+`;
+
+export const SelectUF = styled.select` 
+    background-color: #D8D8D8;
+    border-radius: 10px;
+    height: 50px;
+    width: 250px;
+    margin-right: 100px;
+    margin-left: 100px;
+    outline: none;
+    padding-inline-start: 10px;   
+`;
+
+export const SelectPesquisar = styled.select` 
+    background-color: #D8D8D8;
+    width: 250px;
+    height: 50px;
+    margin-right: 100px;
+    margin-left: 100px;
+    padding-inline-start: 10px;   
+    border-radius: 10px;
+    outline: none;
 `;
