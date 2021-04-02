@@ -10,7 +10,7 @@ export const Carrossel = styled.h3`
     margin-right: auto;
     background: #364d79;
     @media(max-width: 1440px){
-      height: 10vh;
+      height: 70vh;
   }
 `;
 export const CarrosselDistancia = styled.div`

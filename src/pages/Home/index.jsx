@@ -3,7 +3,7 @@ import { FaSearchLocation } from "react-icons/fa";
 import CarrosselCorpo from '../../components/Carrossel/index';
 import CityValues from '../../contents/city';
 
-import { SelectUF, Container, LineInputs, LineH1, Button, SelectPesquisar, SelectTags} from '../../components/styles';
+import { SelectUF, LineInputs, LineH1, Button, SelectPesquisar, SelectTags} from '../../components/styles';
 import HeaderPage from '../../components/Header/index';
 import { CarrosselDistancia } from '../../components/Carrossel/styled';
 

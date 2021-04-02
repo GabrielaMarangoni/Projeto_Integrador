@@ -35,6 +35,12 @@ export const ContainerBranco = styled.div`
     border-radius: 20px;
     padding-top: 5vh;
     margin-top: 15vh;
+    @media(max-width: 1024px){
+      width: 60vw;
+  }
+    @media(max-width: 768px){
+        width: 75vw;
+    }
 `;
 
 export const Label = styled.text`
