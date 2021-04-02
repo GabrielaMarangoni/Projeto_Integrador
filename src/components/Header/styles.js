@@ -39,3 +39,18 @@ export const ButtonHeader = styled.button`
     &:hover{
      background: #e6ffe6;
 }`;
+// aling só funciona usando flex junto
+export const ButtonReturn = styled.button`
+  background: transparent;
+  font-family: Simonetta;
+  font-weight: bold;
+  height: fit-content;
+  width: fit-content;
+  color: white;
+  font-size: 17px;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  flex-direction: row;
+  svg{margin-right: 18px};
+`;

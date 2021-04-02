@@ -12,15 +12,13 @@ module.exports = {
          extensions: ['.js', '.jsx', '.png'],
      },
      devServer: {
-            contentBase: path.resolve(__dirname, 'public')
+            contentBase: path.resolve(__dirname, 'public'),
+            historyApiFallback: true
      },
      plugins: [
           new HtmlWebpackPlugin({
                   template: path.resolve(__dirname, 'public', 'index.html')
-          })
-     ],
-     module: {
-           rules: [
+          }) ], module: { rules: [
                 {
                         test: /\.(png|jpg|gif)$/i,
                         use: [

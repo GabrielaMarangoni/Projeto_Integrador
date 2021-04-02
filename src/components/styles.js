@@ -11,7 +11,7 @@ export const Container = styled.div`
 export const SelectUF = styled.select` 
     background-color: #D3D3D3;
     position: center;
-    width: 150px;
+    width: 170px;
     height: 47px;
     margin-right: 30px;
     padding-inline-start: 10px;   
@@ -28,6 +28,7 @@ export const SelectPesquisar = styled.select`
     padding-inline-start: 10px;   
     border-radius: 10px;
     outline: none;
+
     @media(max-width: 1440px){
       width: 15vw;
   }

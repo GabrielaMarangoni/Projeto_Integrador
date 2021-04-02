@@ -1,7 +1,8 @@
 import React from 'react';
 import logo from '../../images/logo.png';
+import { AiOutlineArrowLeft } from "react-icons/ai";
 
-import { Logo, Header, ButtonHeader } from './styles';
+import { Logo, Header, ButtonHeader, ButtonReturn, Button } from './styles';
 
 // O props significa propriedades que são passadas ao seu componente
 const HeaderPage =(props) =>{
@@ -13,9 +14,17 @@ const HeaderPage =(props) =>{
             <Logo src={logo} alt='logomarca' />
             { /* Aqui foi dito: Se for passado um parametro home e ele for true então terá um botão */ }
             { props.home && (
-                <ButtonHeader>
+                <ButtonHeader onClick={props.onClick}>
                     CADASTRE UM PONTO DE INTERESSE
                 </ButtonHeader>
+            ) }
+
+            { props.register && (
+                <ButtonReturn onClick={props.onClick}>
+                   <AiOutlineArrowLeft size = {20} name = 'AiOutlineArrowLeft' color = '#fff'/>
+                    Voltar para home
+                </ButtonReturn>
+               
             ) }
         </Header>
     )

@@ -2,6 +2,7 @@ import React, { useCallback, useState } from 'react';
 import { FaSearchLocation } from "react-icons/fa";
 import CarrosselCorpo from '../../components/Carrossel/index';
 import CityValues from '../../contents/city';
+import { useHistory } from 'react-router-dom';
 
 import { SelectUF, LineInputs, LineH1, Button, SelectPesquisar, SelectTags} from '../../components/styles';
 import HeaderPage from '../../components/Header/index';
@@ -11,7 +12,7 @@ const Home = () => {
     
     const [state, setState] = useState();
     const [city, setCity] = useState();
-  
+    const history = useHistory();
 
     const handleUF = useCallback((estado) => {
         setState(estado)
@@ -24,12 +25,17 @@ const Home = () => {
         setCity(city)
     }, [city])
 
+    const goToRegister = useCallback(() => {
+        history.push('/cadastro')
+    }, [])
+   
+
 
     return (
-        <>
+        <>           
+            <HeaderPage home onClick={goToRegister}/>
+          
             
-            <HeaderPage home/>            
-
             <LineInputs>
                 <SelectUF onChange = {(e) => handleUF(e.target.value)} value = {state}>
                     <option key = 'init'>Selecione o Estado</option>

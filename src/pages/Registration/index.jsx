@@ -1,4 +1,5 @@
 import React, { useCallback, useState} from 'react';
+import { useHistory } from 'react-router-dom';
 import CityValues from '../../contents/city';
 
 
@@ -10,7 +11,7 @@ const Registration =() =>{
 
     const [state, setState] = useState();
     const [city, setCity] = useState();
-  
+    const history = useHistory();
 
     const handleUF = useCallback((estado) => {
         setState(estado)
@@ -23,6 +24,9 @@ const Registration =() =>{
         setCity(city)
     }, [city])
 
+    const goToHome = useCallback(() => {
+        history.goBack('/')
+    }, [])
  
     // Aqui tu usou o React.Fragment que é algo que tu n acha no teu html real. ELE NÃO É UMA TAG. Tu não acha ele no inspect, por exemplo.
     // Por padrão, o React exige que haja um elemento pai e dentro todos os outros elementos. Por isso, antes, tudo estava dentro do Container.
@@ -30,10 +34,11 @@ const Registration =() =>{
 
     // Observe que o header sem a props home não tem o botão exibido
     return (
-        
-        <React.Fragment>
-            <HeaderPage/>
+       
 
+       
+        <React.Fragment>
+            <HeaderPage register  onClick={goToHome}/>
           
                 <Line>
                     <ContainerBranco>
@@ -53,8 +58,9 @@ const Registration =() =>{
                                         {CityValues.estados.map((uf, index) => (
                                             <option key ={index.toString()} value = {uf.sigla}>{uf.nome}</option>
                                         ))}
-                                    </SelectUF>                                
-                                <Label>Descrição sobre o lugar</Label>
+                                    </SelectUF>                    
+
+                                <Label>Comentário sobre o lugar</Label>
                                 
                                 <InputCadastro/> 
                             </LineInput>
