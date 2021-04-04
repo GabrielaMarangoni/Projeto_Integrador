@@ -13,7 +13,7 @@ export const Header = styled.header`
   justify-content: space-between;
   box-sizing: border-box;
   position: fixed;
-  padding: 10px 10px 10px 10px;
+  padding: 10px 50px 10px 50px;
 `;
 
 export const Logo = styled.img`
@@ -40,6 +40,7 @@ export const ButtonHeader = styled.button`
      background: #e6ffe6;
 }`;
 // aling só funciona usando flex junto
+// svg para estilizar o icone/imagem
 export const ButtonReturn = styled.button`
   background: transparent;
   font-family: Simonetta;
