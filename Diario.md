@@ -114,10 +114,13 @@ O que eu farei até a próxima reunião diária?
 
 ### Guilherme Rio
 O que eu fiz até ontém? 
-- Testou as rotas do backend no NODEJS, sem sucesso.
+- Testou as rotas do backend no NODEJS.
 
 O que eu farei até a próxima reunião diária?
 - Estudarei mais sobre as rotas do beckend.
+
+Quais foram os impedimentos que me fizeram não concluir parte das minhas tarefas?
+- Devido a grande quantidade de tarefas e provas de outras matérias não houve muito tempo disponível para trabalhar no projeto.
 
 ### Guilherme Vasco
 O que eu fiz até ontém? 
@@ -125,3 +128,35 @@ O que eu fiz até ontém?
 
 O que eu farei até a próxima reunião diária?
 - Estudar a aplicação do banco de dados em NODEJS.
+
+Quais foram os impedimentos que me fizeram não concluir parte das minhas tarefas?
+- Devido a grande quantidade de tarefas e provas de outras matérias não houve muito tempo disponível para trabalhar no projeto.
+
+## Reunião 6
+
+### Data: 05/04/2021
+
+Hoje na reunião discutimos sobre as branchs, as rotas, o backend, e adequamos a issue de número 05.
+
+Participantes: Gabriela, Guilherme Vasco e Guilherme Rio
+
+### Gabriela 
+O que eu fiz até ontém? 
+- Implementou a tela do cadastro do Turistando.
+
+O que eu farei até a próxima reunião diária?
+- Implementará a tela da pesquisa.
+
+### Guilherme Rio
+O que eu fiz até ontém? 
+- Começou as rotas do backend.
+
+O que eu farei até a próxima reunião diária?
+- Continuarei as rotas.
+
+### Guilherme Vasco
+O que eu fiz até ontém? 
+- Começou a trabalhar no backend, e atualizou o tipo da imagem no banco de dados.
+
+O que eu farei até a próxima reunião diária?
+- Continuar trabalhando no backend do cadastro.
