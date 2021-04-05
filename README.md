@@ -46,8 +46,8 @@ $ nodejs -v
 
 ## Para rodar o programa basta fazer:
 
-- (instalador de sua preferência) build
 - (instalador de sua preferência) install
+- (instalador de sua preferência) build
 - (instalador de sua preferência) dev 
 
 
