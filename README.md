@@ -9,8 +9,8 @@ O Turistando vai ser uma plataforma com o mesmo intuito de uma rede social, mas 
 - Buscar cidade de interesse
 - Buscar tag de interesse
 - Filtrar tag através de cidade ou cidade através de tag
-- Mostrar opiniões de outros usuários dentro da tag ou cidade selecionada
-- Adicionar novas opiniões a respeito de tags ou cidades selecionada
+- Mostrar opiniões de outros usuários dentro da cidade selecionada
+- Adicionar novas opiniões a respeito das cidades selecionadas
 - Adicionar fotos de locais
 
 
