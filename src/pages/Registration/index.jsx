@@ -53,15 +53,15 @@ const Registration =() =>{
             // Aqui tu vai chamar o famoso backend
             console.log(`nome: ${name}\ntag: ${tags}\nendereço: ${address}\nnúmero/complemento: ${reference}\nestado: ${state}\ncidade: ${city}\ndescription: ${description}\nimagens: ${imgs}\n`)
         } else if(state === undefined) {
-            alert('Por favor escolha um estado\nPara que consiga fazer o cadastro do ponto de interesse é necessário o campo estado')
+            alert('Por favor escolha um estado.\nPara que consiga fazer o cadastro do ponto de interesse é necessário o campo estado.')
         } else if(city === undefined) {
-            alert('Por favor escolha uma cidade\nPara que consiga fazer o cadastro do ponto de interesse é necessário o campo cidade')
+            alert('Por favor escolha uma cidade.\nPara que consiga fazer o cadastro do ponto de interesse é necessário o campo cidade.')
         } else if(!tags) {
-            alert('Por favor adicione uma tag\nPara que consiga fazer o cadastro do ponto de interesse é necessário ao menos uma tag')
+            alert('Por favor adicione uma tag.\nPara que consiga fazer o cadastro do ponto de interesse é necessário ao menos uma tag.')
         } else if(!imgs) {
-            alert('Por favor adicione as imagens\nPara que consiga fazer o cadastro do ponto de interesse é necessário ao menos uma imagem')
+            alert('Por favor adicione as imagens.\nPara que consiga fazer o cadastro do ponto de interesse é necessário ao menos uma imagem.')
         } else {
-            alert('Por favor preencha todos os campos')
+            alert('Por favor preencha todos os campos.')
         }
     }, [name, tags, address, reference, state, city, description, imgs])
  
