@@ -44,6 +44,9 @@ $ sudo apt install npm
 
 $ nodejs -v
 
+## Para rodar o banco de dados
+- execute o script SQL Turistando.sql através do Workbench ou por linha de código.
+
 ## Para rodar o programa basta fazer:
 
 - (instalador de sua preferência) install
