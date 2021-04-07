@@ -13,7 +13,7 @@ const Registration =() =>{
     const [tags, setTags] = useState('');
     const [address, setAddress] = useState('');
     const [reference, setReference] = useState('');
-    const [description, setDescription] = useState('');
+    const [commentary, setCommentary] = useState('');
     const [state, setState] = useState();
     const [city, setCity] = useState();
     const [imgData, setImgData] = useState([]);
@@ -49,9 +49,13 @@ const Registration =() =>{
     }, [])
 
     const register = useCallback(() => {
-        if(state && city && name && tags && address && reference && description && imgs) {
-            // Aqui tu vai chamar o famoso backend
-            console.log(`nome: ${name}\ntag: ${tags}\nendereço: ${address}\nnúmero/complemento: ${reference}\nestado: ${state}\ncidade: ${city}\ndescription: ${description}\nimagens: ${imgs}\n`)
+        if(state && city && name && tags && address && reference && commentary && imgs) {
+        
+            let realTags = tags.split(',');
+
+            console.log(realTags)
+          
+            console.log(`nome: ${name}\ntag: ${tags}\nendereço: ${address}\nnúmero/complemento: ${reference}\nestado: ${state}\ncidade: ${city}\ncommentary: ${commentary}\nimagens: ${imgs}\n`)
         } else if(state === undefined) {
             alert('Por favor escolha um estado.\nPara que consiga fazer o cadastro do ponto de interesse é necessário o campo estado.')
         } else if(city === undefined) {
@@ -63,7 +67,7 @@ const Registration =() =>{
         } else {
             alert('Por favor preencha todos os campos.')
         }
-    }, [name, tags, address, reference, state, city, description, imgs])
+    }, [name, tags, address, reference, state, city, commentary, imgs])
  
     // Aqui tu usou o React.Fragment que é algo que tu n acha no teu html real. ELE NÃO É UMA TAG. Tu não acha ele no inspect, por exemplo.
     // Por padrão, o React exige que haja um elemento pai e dentro todos os outros elementos. Por isso, antes, tudo estava dentro do Container.
@@ -101,8 +105,9 @@ const Registration =() =>{
                             </Column>
 
                             <Column>
-                                <Label>Tags sobre o lugar</Label>
-                                <InputCadastro value={tags} onChange={(e) => setTags(e.target.value)}/>
+                                <Label>Tags sobre o lugar (separe por vírgula)</Label>
+                                { /* toUpperCase() deixa em caps lock */ }
+                                <InputCadastro value={tags} onChange={(e) => setTags(e.target.value.toUpperCase())}/>
 
                                 <Label>Número/Complemento</Label>
                                 <InputCadastro value={reference} onChange={(e) => setReference(e.target.value)}/>
@@ -120,7 +125,7 @@ const Registration =() =>{
                         <Row>
                             <Column style={{ width: '100%' }}>
                                 <Label>Comentário sobre o lugar</Label>        
-                                <TextAreaCadastro value={description} onChange={(e) => setDescription(e.target.value)}/> 
+                                <TextAreaCadastro value={commentary} onChange={(e) => setCommentary(e.target.value)}/> 
                             </Column>
                         </Row>
                         <Row>
