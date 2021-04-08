@@ -50,8 +50,7 @@ const Home = () => {
                     <option key ={index.toString()}  value = {cities}>{cities} </option>
                 ))}
                 </SelectPesquisar>
-                
-                <SelectTags/>
+
                 <Button> <FaSearchLocation  size = {35} name = 'FaSearchLocation' color = '#000'/> </Button> 
             </LineInputs>
 

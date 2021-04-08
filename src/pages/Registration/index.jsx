@@ -50,11 +50,16 @@ const Registration =() =>{
 
     const register = useCallback(() => {
         if(state && city && name && tags && address && reference && commentary && imgs) {
-        
+            // Vamos separar as palavras agr
+            // Obs: let é tipo var, mas processa um pouco mais rápido
             let realTags = tags.split(',');
+            // Terá que pegar as tags do banco de dados e ver se alguma delas existem 
+            // Se existir, serásomente lincado com o id, caso contrário será adicionado e lincado
+            // ISSO NÃO FOI FEITO AINDA NO BACKEND, NÃO VAI SER POSSÍVEL FAZER A VERIFICAÇÃO (pra variar)
 
+            
             console.log(realTags)
-          
+            // Aqui tu vai chamar o famoso backend
             console.log(`nome: ${name}\ntag: ${tags}\nendereço: ${address}\nnúmero/complemento: ${reference}\nestado: ${state}\ncidade: ${city}\ncommentary: ${commentary}\nimagens: ${imgs}\n`)
         } else if(state === undefined) {
             alert('Por favor escolha um estado.\nPara que consiga fazer o cadastro do ponto de interesse é necessário o campo estado.')
