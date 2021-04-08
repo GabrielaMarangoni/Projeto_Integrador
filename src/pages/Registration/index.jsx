@@ -63,15 +63,15 @@ const Registration =() =>{
 
             console.log(`nome: ${name}\ntag: ${tags}\nendereço: ${address}\nnúmero/complemento: ${reference}\nestado: ${state}\ncidade: ${city}\ncommentary: ${commentary}\nimagens: ${imgs}\n`)
         } else if(state === undefined) {
-            alert('Por favor preencha todos os campos necessários (*).')
+            alert('Por favor, preencha todos os campos necessários (*).')
         } else if(city === undefined) {
-            alert('Por favor preencha todos os campos necessários (*).')
+            alert('Por favor, preencha todos os campos necessários (*).')
         } else if(!tags) {
-            alert('Por favor preencha todos os campos necessários (*).')
+            alert('Por favor, preencha todos os campos necessários (*).')
         } else if(!imgs) {
-            alert('Por favor preencha todos os campos necessários (*).')
+            alert('Por favor, preencha todos os campos necessários (*).')
         } else {
-            alert('Por favor preencha todos os campos necessários (*).')
+            alert('Por favor, preencha todos os campos necessários (*).')
         }
     }, [name, tags, address, reference, state, city, commentary, imgs])
  
@@ -82,7 +82,7 @@ const Registration =() =>{
     // Observe que o header sem a props home não tem o botão exibido
     return (     
         <React.Fragment>
-            
+
             <HeaderPage register  onClick={goToHome}/>
           
                 <Line>

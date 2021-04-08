@@ -29,7 +29,7 @@ const Home = () => {
         history.push('/cadastro')
     }, [])
 
-    const goToSearch = useCallback(() => {
+    const goToSearchPage = useCallback(() => {
         history.push('/pesquisa')
     }, [])
    
@@ -55,7 +55,7 @@ const Home = () => {
                 ))}
                 </SelectPesquisar>
 
-                <Button onClick={goToSearch}> <FaSearchLocation  size = {35} name = 'FaSearchLocation' color = '#000'/> </Button> 
+                <Button onClick={goToSearchPage}> <FaSearchLocation  size = {35} name = 'FaSearchLocation' color = '#000'/> </Button> 
             </LineInputs>
 
             <LineH1>
