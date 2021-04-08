@@ -49,23 +49,29 @@ const Registration =() =>{
     }, [])
 
     const register = useCallback(() => {
-        if(state && city && name && tags && address && reference && commentary && imgs) {
-        
+        if(state && city && name && tags && address && commentary && imgs) {
+            // Vamos separar as palavras agr
+            // Obs: let é tipo var, mas processa um pouco mais rápido
             let realTags = tags.split(',');
-
+            // Terá que pegar as tags do banco de dados e ver se alguma delas existem 
+            // Se existir, será somente lincado com o id, caso contrário será adicionado e lincado
+            
+            
             console.log(realTags)
-          
+
+            // Aqui vai chamar o famoso backend
+
             console.log(`nome: ${name}\ntag: ${tags}\nendereço: ${address}\nnúmero/complemento: ${reference}\nestado: ${state}\ncidade: ${city}\ncommentary: ${commentary}\nimagens: ${imgs}\n`)
         } else if(state === undefined) {
-            alert('Por favor escolha um estado.\nPara que consiga fazer o cadastro do ponto de interesse é necessário o campo estado.')
+            alert('Por favor preencha todos os campos necessários (*).')
         } else if(city === undefined) {
-            alert('Por favor escolha uma cidade.\nPara que consiga fazer o cadastro do ponto de interesse é necessário o campo cidade.')
+            alert('Por favor preencha todos os campos necessários (*).')
         } else if(!tags) {
-            alert('Por favor adicione uma tag.\nPara que consiga fazer o cadastro do ponto de interesse é necessário ao menos uma tag.')
+            alert('Por favor preencha todos os campos necessários (*).')
         } else if(!imgs) {
-            alert('Por favor adicione as imagens.\nPara que consiga fazer o cadastro do ponto de interesse é necessário ao menos uma imagem.')
+            alert('Por favor preencha todos os campos necessários (*).')
         } else {
-            alert('Por favor preencha todos os campos.')
+            alert('Por favor preencha todos os campos necessários (*).')
         }
     }, [name, tags, address, reference, state, city, commentary, imgs])
  
@@ -74,11 +80,9 @@ const Registration =() =>{
     // Dessa vez, o Container não tem influência nenhuma no Header por não ter o elemento Header como filho dele
 
     // Observe que o header sem a props home não tem o botão exibido
-    return (
-       
-
-       
+    return (     
         <React.Fragment>
+            
             <HeaderPage register  onClick={goToHome}/>
           
                 <Line>
@@ -89,13 +93,13 @@ const Registration =() =>{
                       
                         <Row>
                             <Column>
-                                <Label>Nome do lugar</Label>
+                                <Label>*Nome do lugar</Label>
                                 <InputCadastro value={name} onChange={(e) => setName(e.target.value)}/>
 
-                                <Label>Endereço</Label>
+                                <Label>*Endereço</Label>
                                 <InputCadastro value={address} onChange={(e) => setAddress( e.target.value)}/> 
 
-                                <Label>Estado</Label>
+                                <Label>*Estado</Label>
                                 <SelectUF onChange = {(e) => handleUF(e.target.value)} value = {state}>
                                     <option key = 'init'>Selecione o Estado</option>
                                     {CityValues.estados.map((uf, index) => (
@@ -105,14 +109,14 @@ const Registration =() =>{
                             </Column>
 
                             <Column>
-                                <Label>Tags sobre o lugar (separe por vírgula)</Label>
+                                <Label>*Tags sobre o lugar (separe por vírgula)</Label>
                                 { /* toUpperCase() deixa em caps lock */ }
                                 <InputCadastro value={tags} onChange={(e) => setTags(e.target.value.toUpperCase())}/>
 
                                 <Label>Número/Complemento</Label>
                                 <InputCadastro value={reference} onChange={(e) => setReference(e.target.value)}/>
 
-                                <Label>Cidade</Label>
+                                <Label>*Cidade</Label>
                                 <SelectPesquisar  onChange = {(e) => handleCity(e.target.value)} value = {city}>
                                     <option key = 'init'>Selecione a Cidade</option>
                                     {CityValues.estados.find((city) => city.sigla == state)?.cidades.map((cities, index) => (
@@ -124,13 +128,13 @@ const Registration =() =>{
 
                         <Row>
                             <Column style={{ width: '100%' }}>
-                                <Label>Comentário sobre o lugar</Label>        
+                                <Label>*Comentário sobre o lugar</Label>        
                                 <TextAreaCadastro value={commentary} onChange={(e) => setCommentary(e.target.value)}/> 
                             </Column>
                         </Row>
                         <Row>
                             <Column style={{ width: '100%' }}>
-                                <Label>Imagem</Label>
+                                <Label>*Imagem</Label>
                                 { /* Aqui que vamos mexer. Aqui usamos a prpriedade style em uma tag html. Essa propriedade permite que a gente faça uma
                                     estilização no próprio código. A posição é absoluta (ela está acima dos componentes) e não há visibilidade. O próximo passo é
                                     mostrarmos qual lugar tera o efeito disso que foi escondido. Vamos estilizar o label agora */ }

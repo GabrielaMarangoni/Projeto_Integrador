@@ -57,15 +57,32 @@ export const LineInputs = styled.div`
     display: flex;
     justify-content: center;
     width: 100vw;
-    padding-top: 170px;
-
+    padding-top: 130px;
+    @media(max-width: 1440px){
+      padding-top: 70px;
+  }
+    @media(max-width: 1024px){
+      padding-top: 90px;
+    }
+  @media(max-width: 768px){
+    padding-top: 120px;
+  }
 `;
 
 export const LineH1 = styled.div`
     align-items: center;
     display: flex;
     justify-content: center;
-    padding-top: 70px;
+    padding-top: 50px;
+    @media(max-width: 1440px){
+      padding: 5px 200px 0 200px;
+  }
+    @media(max-width: 1024px){
+      padding: 5px 100px 0 100px;
+  }
+  @media(max-width: 768px){
+      padding: 5px 30px 0 30px;
+  }
 
 `;
 

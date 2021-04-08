@@ -28,6 +28,10 @@ const Home = () => {
     const goToRegister = useCallback(() => {
         history.push('/cadastro')
     }, [])
+
+    const goToSearch = useCallback(() => {
+        history.push('/pesquisa')
+    }, [])
    
 
 
@@ -50,9 +54,8 @@ const Home = () => {
                     <option key ={index.toString()}  value = {cities}>{cities} </option>
                 ))}
                 </SelectPesquisar>
-                
-                <SelectTags/>
-                <Button> <FaSearchLocation  size = {35} name = 'FaSearchLocation' color = '#000'/> </Button> 
+
+                <Button onClick={goToSearch}> <FaSearchLocation  size = {35} name = 'FaSearchLocation' color = '#000'/> </Button> 
             </LineInputs>
 
             <LineH1>
