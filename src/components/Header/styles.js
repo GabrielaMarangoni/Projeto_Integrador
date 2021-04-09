@@ -19,14 +19,12 @@ export const Header = styled.header`
 
 export const Logo = styled.img`
   height: 6vh;
-  @media(max-width: 1024px){
-      height: 10vh;
-  }
+  cursor: pointer;
   @media(max-width: 1440px){
-      height: 12vh;
+      height: 9vh;
   }
-  @media(max-width: 375px){
-      height: 20vh;
+  @media(max-width: 1024px){
+      height: 8vh;
   }
 `;
 
@@ -37,6 +35,11 @@ export const ButtonHeader = styled.button`
     border-radius: 10px;
     outline: none;
     font-family: Simonetta;
+    font-size: 12px;
+    font-weight: bold;
+    @media(max-width: 1440px){
+      height: 8vh;
+  }
     &:hover{
      background: #e6ffe6;
 }`;

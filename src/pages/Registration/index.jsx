@@ -45,7 +45,7 @@ const Registration =() =>{
     }, [city])
 
     const goToHome = useCallback(() => {
-        history.goBack('/')
+        history.push('/')
     }, [])
 
     const register = useCallback(() => {

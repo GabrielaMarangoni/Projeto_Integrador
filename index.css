@@ -3,9 +3,7 @@ body {
   background-color: #40A798;
 
     margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-      sans-serif;
+    font-family: Simonetta -apple-system;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
      padding: 0;

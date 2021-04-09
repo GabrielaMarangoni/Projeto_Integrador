@@ -1,13 +1,5 @@
 import styled from 'styled-components';
 
-export const Container = styled.div`
-  background: #40A798;
-  width: 100vw;
-  height: 100vh;
-  box-sizing: border-box;
-
-`;
-
 export const SelectUF = styled.select` 
     background-color: #D3D3D3;
     position: center;

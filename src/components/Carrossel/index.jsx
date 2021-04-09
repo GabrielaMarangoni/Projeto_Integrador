@@ -1,27 +1,38 @@
 import { Carousel } from 'antd';
 
-import { Carrossel } from '../../components/Carrossel/styled';
+import { Carrossel, Name } from '../../components/Carrossel/styled';
 
 const CarrosselCorpo = () => {
 
     return (
         <Carousel autoplay>
-            <div>
-            <Carrossel>1</Carrossel>
-            </div>
+            <Carrossel>
+                <Name>
+                    <h1>Praia Gravatá</h1>
+                    <h2>Navegantes - SC</h2>
+                </Name>
+            </Carrossel> 
 
-            <div>
-            <Carrossel>2</Carrossel>
-            </div>
+            <Carrossel>
+                <Name>
+                    <h1>Praia Gravatá</h1>
+                    <h2>Navegantes - SC</h2>
+                </Name>
+            </Carrossel> 
 
-            <div>
-            <Carrossel>3</Carrossel>
-            </div>
+            <Carrossel>
+                <Name>
+                    <h1>Praia Gravatá</h1>
+                    <h2>Navegantes - SC</h2>
+                </Name>
+            </Carrossel> 
 
-            <div>
-            <Carrossel>4</Carrossel>
-            </div>
-          
+            <Carrossel>
+                <Name>
+                    <h1>Praia Gravatá</h1>
+                    <h2>Navegantes - SC</h2>
+                </Name>
+            </Carrossel>        
         </Carousel>
       
     )
