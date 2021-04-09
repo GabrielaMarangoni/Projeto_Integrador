@@ -48,10 +48,11 @@ $ nodejs -v
 - execute o script SQL Turistando.sql através do Workbench ou por linha de código.
 
 ## Para rodar o front-end:
-
-- yarn install
-- yarn build
-- yarn dev 
+| Command | Description |
+|---------|-------------|
+| `yarn install` |Instala as dependências do projeto |
+| `yarn build` | Cria pacote de código com configurações de produção |
+| `yarn dev` | roda um servidor web  |
 
 
 
