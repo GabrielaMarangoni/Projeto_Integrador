@@ -176,6 +176,7 @@ O que eu fiz até ontém?
 
 O que eu farei até a próxima reunião diária?
 - Reconstruirei o back-end começado pelo Guilherme Rio e Guilherme Vasco e finalizarei a primeira sprint que era para a semana passada. 
+- Atualizarei o README.md
 
 Quais foram os impedimentos que me fizeram não concluir parte das minhas tarefas? 
 - Pensando e pesquisando uma maneira de como fazer as tags na tela pesquisar.
