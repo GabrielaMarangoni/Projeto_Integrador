@@ -45,13 +45,6 @@ Hoje na reunião foi corrigido as histórias de usuário, colocado as estimativa
 
 Participantes: Guilherme Vasco e Guilherme Rio
 
-### Gabriela 
-O que eu fiz até ontém? 
-- Adicionou informações ao README.md 
-
-O que eu farei até a próxima reunião diária?
-- Farei o prototipo inicial das telas no papel juntamente com o Guilherme Rio
-
 ### Guilherme Rio
 O que eu fiz até ontém? 
 - Estudou sobre NODEJS
@@ -160,3 +153,29 @@ O que eu fiz até ontém?
 
 O que eu farei até a próxima reunião diária?
 - Continuar trabalhando no backend do cadastro.
+
+## Reunião 7
+
+### Data: 13/04/2021
+
+Na reunião de hoje foi dividido o grupo. Foi decidido pelo professor que eu finalizarei o projeto sozinha e os guris, Guilherme Rio e Guilherme Vasco, irão continuar o mesmo projeto, porém em outro repositório de critério deles.
+Como foi feito dessa decisão, resolvi fazer algumas mudanças: 
+- Mudarei de MySQL para PostgreSQL;
+- Passarei a usar ORM para lidar com o banco de dados na API (sequelize);
+- Passarei a usar TypeScript com node no lugar de JavaScript;
+- Usarei Docker para rodar o BD;
+
+Para a próxima reunião eu irei finalizar a primeira sprint que ainda não foi finalizada. Para que isso seja possível, irei reconstruir o back-end e fazer a ligação entre eles. 
+Próxima spint ficou pro dia 04/05/2021, então até lá tenho que terminar tanto a primeira quanto a segunda sprint do projeto sem haver erros.
+
+Participantes: Gabriela Marangoni
+### Gabriela 
+O que eu fiz até ontém? 
+- Implementei a tela de pesquisa do Turistando, ainda falta fazer as tags.
+- Dei uma pesquisada para começar na implementação do back-end.
+
+O que eu farei até a próxima reunião diária?
+- Reconstruirei o back-end começado pelo Guilherme Rio e Guilherme Vasco e finalizarei a primeira sprint que era para a semana passada. 
+
+Quais foram os impedimentos que me fizeram não concluir parte das minhas tarefas? 
+- Pensando e pesquisando uma maneira de como fazer as tags na tela pesquisar.
