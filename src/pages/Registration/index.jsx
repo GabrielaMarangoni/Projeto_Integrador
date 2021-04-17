@@ -2,7 +2,7 @@ import React, { useCallback, useState} from 'react';
 import { useHistory } from 'react-router-dom';
 import CityValues from '../../contents/city';
 import { FiImage } from 'react-icons/fi';
-
+import api from '../../services/api'
 
 import { ContainerBranco, Line, Column, Row, ButtonCadastrar, Label, InputCadastro, SelectUF, SelectPesquisar, TextAreaCadastro, ImageInput, Gridlayout, ImgPreview } from './styles';
 import HeaderPage from '../../components/Header/index'
@@ -31,6 +31,7 @@ const Registration =() =>{
             }
         }
         setImgs(files)
+        
     }, [imgData, imgs])
 
     const handleUF = useCallback((estado) => {
@@ -49,27 +50,23 @@ const Registration =() =>{
     }, [])
 
     const register = useCallback(() => {
-        if(state && city && name && tags && address && commentary && imgs) {
-            // Vamos separar as palavras agr
-            // Obs: let é tipo var, mas processa um pouco mais rápido
-            let realTags = tags.split(',');
-            // Terá que pegar as tags do banco de dados e ver se alguma delas existem 
-            // Se existir, será somente lincado com o id, caso contrário será adicionado e lincado
+        console.log(imgData);
+        if(state && city && name && tags && commentary && imgs) {
             
-            
-            console.log(realTags)
 
-            // Aqui vai chamar o famoso backend
+            api.post('/places/total', {
+                name,
+                city,
+                state,
+                street: address,
+                reference,
+                tags,
+                images: 'https://lh3.googleusercontent.com/proxy/kVvONsQlcIcgV0Na7dczT6x4Gx1iBgUg05RdmRVc1m0BzNdbZ76g-ivP6U_E4ma_77VCEDEgVNCweB-4ftAUZGaaA6J1sH16e0ohxVWv_7EGyv5ThEhLpYY0wHvV8NMdlcujqyAJcrJ0RmCzKlDDU-S1nXcdcaS3SmZxG40',
+                commentary
+            }).then(() => alert('Cadastro feito com sucesso!'))
+            // Aqui vai chamar o famoso e incrível e fodástico backend
 
             console.log(`nome: ${name}\ntag: ${tags}\nendereço: ${address}\nnúmero/complemento: ${reference}\nestado: ${state}\ncidade: ${city}\ncommentary: ${commentary}\nimagens: ${imgs}\n`)
-        } else if(state === undefined) {
-            alert('Por favor, preencha todos os campos necessários (*).')
-        } else if(city === undefined) {
-            alert('Por favor, preencha todos os campos necessários (*).')
-        } else if(!tags) {
-            alert('Por favor, preencha todos os campos necessários (*).')
-        } else if(!imgs) {
-            alert('Por favor, preencha todos os campos necessários (*).')
         } else {
             alert('Por favor, preencha todos os campos necessários (*).')
         }
@@ -96,7 +93,7 @@ const Registration =() =>{
                                 <Label>*Nome do lugar</Label>
                                 <InputCadastro value={name} onChange={(e) => setName(e.target.value)}/>
 
-                                <Label>*Endereço</Label>
+                                <Label>Endereço</Label>
                                 <InputCadastro value={address} onChange={(e) => setAddress( e.target.value)}/> 
 
                                 <Label>*Estado</Label>
