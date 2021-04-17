@@ -168,15 +168,46 @@ Como foi feito dessa decisão, resolvi fazer algumas mudanças:
 Para a próxima reunião eu irei finalizar a primeira sprint que ainda não foi finalizada. Para que isso seja possível, irei reconstruir o back-end e fazer a ligação entre eles. 
 Próxima spint ficou pro dia 04/05/2021, então até lá tenho que terminar tanto a primeira quanto a segunda sprint do projeto sem haver erros.
 
-Participantes: Gabriela Marangoni
+Participante: Gabriela Marangoni
+
 ### Gabriela 
 O que eu fiz até ontém? 
 - Implementei a tela de pesquisa do Turistando, ainda falta fazer as tags.
 - Dei uma pesquisada para começar na implementação do back-end.
 
 O que eu farei até a próxima reunião diária?
-- Reconstruirei o back-end começado pelo Guilherme Rio e Guilherme Vasco e finalizarei a primeira sprint que era para a semana passada. 
+- Reconstruirei do zero o back-end começado pelo Guilherme Rio e Guilherme Vasco e finalizarei a primeira sprint que era para a semana passada. 
 - Atualizarei o README.md
 
 Quais foram os impedimentos que me fizeram não concluir parte das minhas tarefas? 
 - Pensando e pesquisando uma maneira de como fazer as tags na tela pesquisar.
+
+## Reunião 8 
+
+### Data: 16/04/2021
+
+Hoje na reunião foi discutidos os problemas enfrentados na hora de começar a mexer com o back-end. 
+Problemas encontrados: 
+- Ocorreu problemas na instalação do PostgreSQL e Docker. Foi perdido muito tempo tentando fazer funcionar. Com isso, a decisão final foi voltar pro MySQL.
+- Ocorreu problemas na hora de salvar a imagem pro banco de dados.
+- Ocorreu problemas na hora da integração.
+
+Para a próxima reunião o ideal é o cadastro funcionando e com a sprint fechada. 
+
+Participante: Gabriela Marangoni 
+
+
+### Gabriela 
+O que eu fiz até ontém? 
+- Comecei a Implementação do back-end (cadastro-sprint 1)
+
+O que eu farei até a próxima reunião diária?
+- Arrumarei soluções pros problemas encontrados.
+- Terminarei de implementar o back-end.
+- Atualizarei o README.MD.
+
+Quais foram os impedimentos que me fizeram não concluir parte das minhas tarefas? 
+- Problemas nas instalações do PostgreSQL e Docker e, perca de tempo tentando fazer funcionar.
+- Problemas com o MySQL na hora da integração. 
+- Não atualizei o README.md, pois ainda algumas coisas podem ser mudadas e outras decididas. 
+
