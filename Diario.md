@@ -186,7 +186,7 @@ Quais foram os impedimentos que me fizeram não concluir parte das minhas tarefa
 
 ### Data: 16/04/2021
 
-Hoje na reunião foi discutidos os problemas enfrentados na hora de começar a mexer com o back-end. 
+Hoje na reunião foi discutido os problemas enfrentados na hora de começar a mexer com o back-end. 
 Problemas encontrados: 
 - Ocorreu problemas na instalação do PostgreSQL e Docker. Foi perdido muito tempo tentando fazer funcionar. Com isso, a decisão final foi voltar pro MySQL.
 - Ocorreu problemas na hora de salvar a imagem pro banco de dados.
