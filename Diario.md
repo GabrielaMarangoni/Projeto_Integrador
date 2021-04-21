@@ -211,3 +211,27 @@ Quais foram os impedimentos que me fizeram não concluir parte das minhas tarefa
 - Problemas com o MySQL na hora da integração. 
 - Não atualizei o README.md, pois ainda algumas coisas podem ser mudadas e outras decididas. 
 
+## Reunião 9
+
+### Data: 20/04/2021
+
+Hoje na reunião foi discutido o problema que estava tendo na integração. Erro foi encontrado e pronto para continuar. Agora sim, até a próxima reunião a sprint 1 estará fechada e poderei dar continuidade a sprint 2. 
+
+Participante: Gabriela Marangoni 
+
+
+### Gabriela 
+O que eu fiz até ontém? 
+- Pesquisando/Procurando o erro que estava dando na hora da integração. Foi arrumado uns minutos antes de começar aula de hoje.
+
+O que eu farei até a próxima reunião diária?
+- continuarei finalizando a primeira sprint 
+
+Quais foram os impedimentos que me fizeram não concluir parte das minhas tarefas? 
+- Erro na integração
+
+
+
+
+
+
