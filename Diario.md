@@ -211,6 +211,7 @@ Quais foram os impedimentos que me fizeram não concluir parte das minhas tarefa
 - Problemas com o MySQL na hora da integração. 
 - Não atualizei o README.md, pois ainda algumas coisas podem ser mudadas e outras decididas. 
 
+
 ## Reunião 9
 
 ### Data: 20/04/2021
@@ -230,6 +231,25 @@ O que eu farei até a próxima reunião diária?
 Quais foram os impedimentos que me fizeram não concluir parte das minhas tarefas? 
 - Erro na integração
 
+
+## Reunião 10
+
+### Data: 24/04/2021
+
+Na reunião de hoje, foi apresentado a finalização da sprint 1. Agora, para as próximas reuniões o foco será inteiramente da segunda sprint que será apresentado no dia 04-05-2021. O front-end, como vimos, já está praticamente todo implementado, faltando somente terminar a implementação das tags. 
+
+Participante: Gabriela Marangoni 
+
+
+### Gabriela 
+O que eu fiz até ontém? 
+- Terminei a sprint 1 do projeto
+
+O que eu farei até a próxima reunião diária?
+- começarei a implementação da sprint 2
+
+Quais foram os impedimentos que me fizeram não concluir parte das minhas tarefas? 
+- não teve impedimentos
 
 
 
