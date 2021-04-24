@@ -60,6 +60,5 @@ $ nodejs -v
 | Nome                          | Contato                                |
 | ----------------------------- |:--------------------------------------:| 
 | Gabriela Marangoni Radigonda  | gabrielaradigonda@alunos.utfpr.edu.br  |
-| Guilherme Bernado Del Rio     | guilhermerio@alunos.utfpr.edu.br       |  
-| Guilherme Vasco da Silva      | guilhermevasco@alunos.utfpr.edu.br     |
+
 
