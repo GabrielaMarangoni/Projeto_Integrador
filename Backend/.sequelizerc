@@ -1,0 +1,8 @@
+//path = lida com caminhos
+const path = require('path');
+
+module.exports = {
+    config: path.resolve(__dirname, 'src', 'shared', 'infra', 'sequelize', 'config.json'),
+    //usa arquivos para fazer confg.
+    'migrations-path': path.resolve(__dirname, 'src', 'shared', 'infra', 'sequelize', 'migrations'),
+}
