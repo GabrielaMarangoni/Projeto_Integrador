@@ -24,12 +24,14 @@ export const Images = styled.img`
     margin-top: 15px;
     display: flex;
     align-items: center;
-    background: #000;
     min-width: 250px;
     width: 100%;
     min-height: 250px;
+    max-height: 250px;
     height: 100%;
     border-radius: 10px;
+    object-fit: cover;
+    background: #2F4F4F;
 `;
 
 export const Container = styled.div`
@@ -48,4 +50,5 @@ export const Content = styled.div`
     grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 100px;
     overflow-y: auto;
+    user-select: none;
 `

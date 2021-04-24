@@ -30,8 +30,12 @@ const Home = () => {
     }, [])
 
     const goToSearchPage = useCallback(() => {
-        history.push('/pesquisa')
-    }, [])
+        if(city !== undefined) {
+            history.push(`/pesquisa?cidade=${city}`)
+        } else {
+            history.push(`/pesquisa`)
+        }
+    }, [city])
    
 
 

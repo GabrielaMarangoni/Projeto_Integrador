@@ -20,6 +20,7 @@ const SearchBar =(props) =>{
     const handleCity = useCallback((city) => {
         setCity(city)
     }, [city])
+
      return (
         <Container>
             <Label>ESTADO</Label>
@@ -31,7 +32,7 @@ const SearchBar =(props) =>{
                 </SelectUF> 
 
             <Label>CIDADE</Label>
-                <SelectCidade  onChange = {(e) => handleCity(e.target.value)} value = {city}>
+                <SelectCidade  onChange = {props.handleCity} value = {props.city}>
                     <option key = 'init'>Selecione a Cidade</option>
                     {CityValues.estados.find((city) => city.sigla == state)?.cidades.map((cities, index) => (
                         <option key ={index.toString()}  value = {cities}>{cities} </option>
@@ -46,7 +47,7 @@ const SearchBar =(props) =>{
                     <h3>"aqui terei que utilizar scrollView, para que quando tiver uma quantidade de tags significativas o usuário consiga rodar(scroll) o containerTags e ter uma vião significativa de todas as tags..."</h3>                   
                 </ContainerTags>
                 
-                <ButtonFilter>
+                <ButtonFilter onClick={props.onClick}>
                     <Label2>Filtrar</Label2>
                 </ButtonFilter>
         </Container>

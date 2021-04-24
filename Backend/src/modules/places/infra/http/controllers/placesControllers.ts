@@ -10,6 +10,27 @@ import TagsRepository from '../../repositories/TagsRepository';
 const Places = require('../../sequelize/entities/places.js');
 
 export default class PlacesControllers {
+    public async indexCity(req: Request, res: Response) {
+        try {
+            const { city } = req.params;
+
+            const places = await Places.findAll({
+                include: [
+                    { association: 'address' },
+                    { association: 'tags' },
+                    { association: 'images' },
+                    { association: 'commentary' }
+                ],
+            })
+
+            let places_search = places.filter((el: any) => el.address && el.address.dataValues.city === city)
+
+            return res.json(places_search);
+        } catch(err) {
+            return res.status(404).json({ error:err.message })
+        }
+    }
+
     public async index(req: Request, res: Response) {
         try {
             // localhost:3333/places/ESSE_É_O_ID

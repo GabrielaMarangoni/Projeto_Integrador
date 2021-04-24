@@ -1,11 +1,23 @@
-import React, { useCallback, useState} from 'react';
+import React, { useCallback, useEffect, useState} from 'react';
 import { useHistory } from 'react-router-dom';
 import CityValues from '../../contents/city';
 import { FiImage } from 'react-icons/fi';
+import crypto from 'crypto-js';
 import api from '../../services/api'
 
 import { ContainerBranco, Line, Column, Row, ButtonCadastrar, Label, InputCadastro, SelectUF, SelectPesquisar, TextAreaCadastro, ImageInput, Gridlayout, ImgPreview } from './styles';
 import HeaderPage from '../../components/Header/index'
+
+import S3 from 'react-aws-s3';
+
+const config = {
+    bucketName: process.env.REACT_APP_AWS_BUCKET_NAME,
+    region: process.env.REACT_APP_AWS_REGION,
+    accessKeyId: process.env.REACT_APP_AWS_ACCESS_KEY_ID,
+    secretAccessKey: process.env.REACT_APP_AWS_SECRET_ACCESS_KEY
+}
+
+const ReactS3Client = new S3(config);
 
 const Registration =() =>{
 
@@ -50,28 +62,53 @@ const Registration =() =>{
     }, [])
 
     const register = useCallback(() => {
-        console.log(imgData);
         if(state && city && name && tags && commentary && imgs) {
-            
-
-            api.post('/places/total', {
-                name,
-                city,
-                state,
-                street: address,
-                reference,
-                tags,
-                images: 'https://lh3.googleusercontent.com/proxy/kVvONsQlcIcgV0Na7dczT6x4Gx1iBgUg05RdmRVc1m0BzNdbZ76g-ivP6U_E4ma_77VCEDEgVNCweB-4ftAUZGaaA6J1sH16e0ohxVWv_7EGyv5ThEhLpYY0wHvV8NMdlcujqyAJcrJ0RmCzKlDDU-S1nXcdcaS3SmZxG40',
-                commentary
-            }).then(() => alert('Cadastro feito com sucesso!'))
-            // Aqui vai chamar o famoso e incrível e fodástico backend
-
-            console.log(`nome: ${name}\ntag: ${tags}\nendereço: ${address}\nnúmero/complemento: ${reference}\nestado: ${state}\ncidade: ${city}\ncommentary: ${commentary}\nimagens: ${imgs}\n`)
+            alert('Estamos fazendo o seu cadastro, por favor aguarde')
+            let imgsUrl = '';
+            for(var a = 0; a < imgs.length; a++) {
+                const fileHash = crypto.lib.WordArray.random(10);
+                const fileName = `${fileHash}-${imgs[a].name}`
+    
+                if(a === 0) {
+                    ReactS3Client.uploadFile(imgs[a],fileName).then(async (file) => {
+                        imgsUrl = `${file.location}`
+    
+                        if(imgs.length === 1) {
+                            registerFunction(name, tags, address, reference, state, city, commentary, imgsUrl)
+                        }
+                    })
+                } else {
+                    ReactS3Client.uploadFile(imgs[a],fileName).then(async (file) => {
+                        if(file.location !== undefined) {
+                            imgsUrl = `${imgsUrl}, ${file.location}`
+                        
+                            if(imgsUrl.split(',').length === imgs.length) {
+                                registerFunction(name, tags, address, reference, state, city, commentary, imgsUrl)
+                            }
+                        }
+                    })
+                }
+    
+            }
         } else {
             alert('Por favor, preencha todos os campos necessários (*).')
         }
     }, [name, tags, address, reference, state, city, commentary, imgs])
- 
+
+    // SÓ PRA DIMINUIR CÓDIGO
+    const registerFunction = useCallback((name, tags, street, reference, state, city, commentary, images) => {
+        api.post('/places/total', {
+            name,
+            city,
+            state,
+            street,
+            reference,
+            tags,
+            images,
+            commentary
+        }).then(() => history.push('/'))
+    }, [])
+
     // Aqui tu usou o React.Fragment que é algo que tu n acha no teu html real. ELE NÃO É UMA TAG. Tu não acha ele no inspect, por exemplo.
     // Por padrão, o React exige que haja um elemento pai e dentro todos os outros elementos. Por isso, antes, tudo estava dentro do Container.
     // Dessa vez, o Container não tem influência nenhuma no Header por não ter o elemento Header como filho dele
@@ -155,9 +192,9 @@ const Registration =() =>{
                                     <Label>Imagens selecionadas</Label>
                                     <Row>
                                         <Gridlayout>
-                                            {imgData.map(img => {
+                                            {imgData.map((img, index) => {
                                                 return(
-                                                    <ImgPreview src={img}/>
+                                                    <ImgPreview src={img} key={index}/>
                                                 )
                                             })}
                                         </Gridlayout>

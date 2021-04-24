@@ -66,6 +66,8 @@ export const LineH1 = styled.div`
     display: flex;
     justify-content: center;
     padding-top: 50px;
+    user-select: none;
+
     @media(max-width: 1440px){
       padding: 5px 200px 0 200px;
   }
