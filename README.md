@@ -1,7 +1,9 @@
 <br/>
 
 <p align="center"><a href="" target="_blank"><img src="https://github.com/GabrielaMarangoni/Projeto_Integrador/blob/README/logo.svg?raw=true" height="150"></a></p>
-
+<p aling="center"
+<span>Créditos ao @PauloCremozo - Twitter</span>
+</p>
 <br/>
 
 <p align="center">
