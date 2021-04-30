@@ -1,6 +1,6 @@
 <br/>
 
-<p align="center"><a href="" target="_blank"><img src="https://github.com/GabrielaMarangoni/Projeto_Integrador/blob/README/logo.svg?raw=true" height="100"></a></p>
+<p align="center"><a href="" target="_blank"><img src="https://github.com/GabrielaMarangoni/Projeto_Integrador/blob/README/logo.svg?raw=true" height="150"></a></p>
 
 <br/>
 
