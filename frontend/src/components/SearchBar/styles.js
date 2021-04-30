@@ -8,6 +8,18 @@ export const Container = styled.aside`
     padding: 7vh 2vh 1.8vh 2vh;
     position: fixed;
 
+    .part-one {
+        height: 20vh;
+    }
+
+    .part-two {
+        height: 69vh;
+
+        .button-div {
+            height: 20%;
+        }
+    }
+
     @media(max-width: 1440px){
         padding-top: 10vh;
         width: 17vw;
@@ -50,8 +62,21 @@ export const SelectCidade = styled.select`
 export const ContainerTags  = styled.div` 
     background-color: #D8D8D8;
     width: 100%;
-    height: 50%;
-    padding: 10px ;
+    height: 80%;
+    padding: 10px;
+
+    overflow-y: auto; // ele fala que agora quando o containerTags encher ele roda 
+    user-select: none; // não deixa o usuário selecionar nada
+
+    div {
+        display: flex;
+        align-items: center;
+        width: 100%;
+
+        input {
+            margin-right: 15px;
+        }
+    }
 `;
 
 export const  ButtonFilter = styled.button` 
