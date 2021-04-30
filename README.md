@@ -1,8 +1,6 @@
-05/03/2021
-
 <br/>
 
-<p align="center"><a href="" target="_blank"><img src="https://github.com/GabrielaMarangoni/Projeto_Integrador/blob/README/logo.svg?raw=true" height="70"></a></p>
+<p align="center"><a href="" target="_blank"><img src="https://github.com/GabrielaMarangoni/Projeto_Integrador/blob/README/logo.svg?raw=true" height="100"></a></p>
 
 <br/>
 
@@ -48,7 +46,7 @@ O Turistando vai ser uma plataforma com o mesmo intuito de uma rede social, mas 
 - Express
 
 
-## :WARNING: IMPORTANTE
+## :warning: IMPORTANTE
 ### Back-end
 No arquivo ***src/shared/infra/sequelize/config.json*** é necessário adequar os dados no banco de dados do seu computador.
 > Por padrão a porta utilizada é 3306. Caso a porta utilizada não seja a padrão, adicionar a chave port.
