@@ -19,6 +19,40 @@ export default class TagsControllers {
             return res.status(400).json({ error: err })
         }
     }
+   
+    public async all_exist(req: Request, res: Response) {
+        try {
+            const tags = await Tags.findAll();
+
+            var name_tags: string[] = tags.map((tag: any) => tag.tag);
+            var array = name_tags;
+            var new_array = array.filter(function(a, b) {
+                return array.indexOf(a) === b
+            });
+
+            return res.json(new_array);
+        } catch (err) {
+            return res.status(400).json({ error: err })
+        }
+    }
+    // criou um metodo chamado search e pegou os parametros das tags. 
+    public async search(req: Request, res: Response) {
+        try {
+            // localhost:3333/tags/ESSE_É_O_ID
+            const { tags } = req.params;
+
+            const tag = await Tags.findAll({
+                include: { association: 'places' },
+                where: {
+                    tag: tags
+                } 
+            });
+
+            return res.json(tag);
+        } catch (err) {
+            return res.status(400).json({ error: err })
+        }
+    }
     
     public async all(req: Request, res: Response) {
         try {

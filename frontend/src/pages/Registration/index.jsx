@@ -109,7 +109,7 @@ const Registration =() =>{
         }).then(() => history.push('/'))
     }, [])
 
-    // Aqui tu usou o React.Fragment que é algo que tu n acha no teu html real. ELE NÃO É UMA TAG. Tu não acha ele no inspect, por exemplo.
+    // Aqui usou o React.Fragment que é algo que n acha no teu html real. ELE NÃO É UMA TAG. Não acha ele no inspect, por exemplo.
     // Por padrão, o React exige que haja um elemento pai e dentro todos os outros elementos. Por isso, antes, tudo estava dentro do Container.
     // Dessa vez, o Container não tem influência nenhuma no Header por não ter o elemento Header como filho dele
 
