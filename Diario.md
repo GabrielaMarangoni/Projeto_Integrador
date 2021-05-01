@@ -253,5 +253,27 @@ Quais foram os impedimentos que me fizeram não concluir parte das minhas tarefa
 
 
 
+## Reunião 11
+
+### Data: 30/04/2021
+
+Na reunião de hoje foi discutido sobre o projeto e seu andamento. 
+Sprint 2 já está finalizada, faltando somente a realização do TDD que ficou pro final de semana. 
+Foi tratado, na reunião, o que será feito durante a semana - dará continuidade na finalização da última tela do projeto.
+
+Participante: Gabriela Marangoni 
+
+
+### Gabriela 
+O que eu fiz até ontém? 
+- Terminei a sprint 2 do projeto
+
+O que eu farei até a próxima reunião diária?
+- continuarei a implementação da última tela do projeto e finalizarei os teste (TDD) para a apresentação do trabalho na terça-feira - 04/05/2020
+
+Quais foram os impedimentos que me fizeram não concluir parte das minhas tarefas? 
+- não teve impedimentos.
+
+
 
 
