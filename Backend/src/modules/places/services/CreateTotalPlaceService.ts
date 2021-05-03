@@ -1,5 +1,3 @@
-import { stringify } from "uuid";
-import ICreateCommentaryDTO from "../dtos/ICreateCommentaryDTO";
 import ICreateTotalPlacesDTO from "../dtos/ICreateTotalPlacesDTO";
 import IAddressesRepository from "../repositories/IAddressesRepository";
 import ICommentaryRepository from "../repositories/ICommentaryRepository";
