@@ -1,4 +1,4 @@
-/* import FakesPlacesRepository from "../repositories/fakes/FakePlacesRepository";
+import FakesPlacesRepository from "../repositories/fakes/FakePlacesRepository";
 import CreatePlacesService from "./CreatePlacesService";
 
 
@@ -15,35 +15,11 @@ describe('CreatePlaces', () => {
         );
     })
 
-    it('should not be able to register a place (uuid invalid)', async () => {
+    it('should be able to register a place', async () => {
         await expect(
             createPlaceService.execute({
-                name: 'Praça das Flores',
-                places_id: 'lasanha'
-            })
-        ).rejects.toBeInstanceOf(Error)
-    })
-
-    it('should not be craete a place of the non-existing place', async () => {
-        await expect(
-            createPlaceService.execute({
-                name: '',
-                places_id: '09a2bde8-b96a-40bd-91fe-06e996d19e4c'
-            })
-        ).rejects.toBeInstanceOf(Error)
-    })
-
-    it('should be create a place of place', async () => {
-        // criando o place
-        const place = await fakePlacesRepository.create({
-            name: 'Um lugar por aí'
-        })
-
-        await expect(
-            createPlaceService.execute({
-                name: 'Praça das Flores',
-                places_id: place.id
+                name: 'Praça das Flores'
             })
         ).resolves.toBeInstanceOf(Object)
     })
-}) */
+})

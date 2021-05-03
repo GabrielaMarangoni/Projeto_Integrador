@@ -55,17 +55,8 @@ class CreateTotalPlacesService {
                 places_id: place.id
             })
         }
-
-        const new_place = await Places.findByPk(place.id, {
-            include: [
-                { association: 'address' },
-                { association: 'tags' },
-                { association: 'images' },
-                { association: 'commentary' }
-            ]
-        })
-
-        return new_place;
+        
+        return { id: place.id }
     }
 }
 
