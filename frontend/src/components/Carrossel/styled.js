@@ -7,10 +7,12 @@ export const Carrossel = styled.div`
   display: flex;
   margin-left: auto;
   margin-right: auto;
-  background-image: url('https://i.pinimg.com/originals/06/fd/c2/06fdc2a4b423c38a1c38bc2cb1b8b8a5.jpg');
+  background-image: url(${props => props.src});
   background-size: cover;
+  background-repeat: no-repeat;
   border-radius: 12px;
-
+  user-select: none; // não deixa o usuário selecionar nada
+  
   @media(max-width: 1440px){
     height: 80vh;
     width: 90%;
@@ -30,7 +32,6 @@ export const Name = styled.div`
   padding: 10px 30px;
   background: #fff;
   border-top-left-radius: 12px;
-
   h1, h2 {
     margin: 0;
   }

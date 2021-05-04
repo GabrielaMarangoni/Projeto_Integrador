@@ -15,6 +15,7 @@ export const Header = styled.header`
   position: fixed;
   padding: 10px 50px 10px 50px;
   z-index: 999999;
+  user-select: none; // não deixa o usuário selecionar nada
 `;
 
 export const Logo = styled.img`

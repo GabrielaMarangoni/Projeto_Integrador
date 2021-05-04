@@ -61,7 +61,7 @@ const Registration =() =>{
         history.push('/')
     }, [])
 
-    const register = useCallback(() => {
+    const register = useCallback(async () => {
         if(state && city && name && tags && commentary && imgs) {
             alert('Estamos fazendo o seu cadastro, por favor aguarde')
             let imgsUrl = '';
@@ -70,7 +70,7 @@ const Registration =() =>{
                 const fileName = `${fileHash}-${imgs[a].name}`
     
                 if(a === 0) {
-                    ReactS3Client.uploadFile(imgs[a],fileName).then(async (file) => {
+                    await ReactS3Client.uploadFile(imgs[a],fileName).then(async (file) => {
                         imgsUrl = `${file.location}`
     
                         if(imgs.length === 1) {
@@ -78,11 +78,11 @@ const Registration =() =>{
                         }
                     })
                 } else {
-                    ReactS3Client.uploadFile(imgs[a],fileName).then(async (file) => {
+                    await ReactS3Client.uploadFile(imgs[a],fileName).then(async (file) => {
                         if(file.location !== undefined) {
                             imgsUrl = `${imgsUrl}, ${file.location}`
-                        
-                            if(imgsUrl.split(',').length === imgs.length) {
+
+                            if(imgsUrl.split(',').length === imgs.length-1) {
                                 registerFunction(name, tags, address, reference, state, city, commentary, imgsUrl)
                             }
                         }

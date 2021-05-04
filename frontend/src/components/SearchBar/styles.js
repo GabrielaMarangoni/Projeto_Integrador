@@ -7,6 +7,7 @@ export const Container = styled.aside`
     box-sizing: border-box;
     padding: 7vh 2vh 1.8vh 2vh;
     position: fixed;
+    user-select: none; // não deixa o usuário selecionar nada
 
     .part-one {
         height: 20vh;
@@ -38,6 +39,7 @@ export const Label = styled.text`
     margin-right: auto;
     width: fit-content;
     padding-left: 10px;
+    user-select: none; // não deixa o usuário selecionar nada
 `;
 
 export const SelectUF = styled.select` 
@@ -47,6 +49,7 @@ export const SelectUF = styled.select`
     width: 100%;
     outline: none;
     padding-inline-start: 10px;  
+    user-select: none; // não deixa o usuário selecionar nada
 `;
 
 export const SelectCidade = styled.select` 
@@ -56,6 +59,7 @@ export const SelectCidade = styled.select`
     padding-inline-start: 10px;   
     border-radius: 10px;
     outline: none;
+    user-select: none; // não deixa o usuário selecionar nada
 `;
 
 
@@ -90,6 +94,7 @@ export const  ButtonFilter = styled.button`
     width: 50%;
     height: 50px;
     margin-top: 4vh;
+    user-select: none; // não deixa o usuário selecionar nada
 `;
 
 export const Label2 = styled.text`
@@ -101,4 +106,5 @@ export const Label2 = styled.text`
     align-items: center;
     font-weight: bold;
     position: fixed;
+    user-select: none; // não deixa o usuário selecionar nada
 `;

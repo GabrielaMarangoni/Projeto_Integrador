@@ -9,6 +9,7 @@ export const SelectUF = styled.select`
     padding-inline-start: 10px;   
     border-radius: 10px;
     outline: none;
+    user-select: none; // não deixa o usuário selecionar nada
 `;
 
 export const SelectPesquisar = styled.select` 
@@ -20,6 +21,7 @@ export const SelectPesquisar = styled.select`
     padding-inline-start: 10px;   
     border-radius: 10px;
     outline: none;
+    user-select: none; // não deixa o usuário selecionar nada
 
     @media(max-width: 1440px){
       width: 15vw;
@@ -38,6 +40,7 @@ export const SelectTags = styled.select`
     padding-inline-start: 10px;
     border-radius: 10px;
     outline: none;
+    user-select: none; // não deixa o usuário selecionar nada
     @media(max-width: 1440px){
       width: 8vw;
   }
@@ -50,6 +53,7 @@ export const LineInputs = styled.div`
     justify-content: center;
     width: 100vw;
     padding-top: 130px;
+    user-select: none; // não deixa o usuário selecionar nada
     @media(max-width: 1440px){
       padding-top: 70px;
   }
@@ -67,6 +71,7 @@ export const LineH1 = styled.div`
     justify-content: center;
     padding-top: 50px;
     user-select: none;
+    user-select: none; // não deixa o usuário selecionar nada
 
     @media(max-width: 1440px){
       padding: 5px 200px 0 200px;
@@ -85,6 +90,7 @@ export const Button = styled.button`
     background: transparent;
     height: 35px;
     width: 35px;
+    user-select: none; // não deixa o usuário selecionar nada
     @media(max-width: 1440px){
       height: 15vw;
   }

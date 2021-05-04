@@ -16,6 +16,7 @@ const SearchPage = () => {
     const getPlaces = useCallback(async () => {
         const query = new URLSearchParams(search);
         console.log(city)
+       
         if(selectedTags.length > 0) {
             if(!city) {
                 console.log('Buscando somente por tags')
