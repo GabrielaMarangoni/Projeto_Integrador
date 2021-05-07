@@ -81,8 +81,7 @@ export const ContainerTagaComentarios = styled.div`
         flex-wrap: wrap;
         display: flex;
         margin: 0;
-        margin-right: auto;
-        
+        margin-right: auto;        
     }
     h3 {
         font-size: 25px;
