@@ -44,7 +44,7 @@ export const Content = styled.div`
     width: 85vw;
     margin-left: 15vw;
     margin-right: auto;
-    margin-top: 7vh; 
+    margin-top: 3vh; 
     padding: 100px 10vh 100px 10vh;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;

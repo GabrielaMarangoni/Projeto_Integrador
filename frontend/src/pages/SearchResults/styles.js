@@ -19,7 +19,7 @@ export const Content = styled.div`
 export const Places = styled.div`
     display: flex;
     flex-direction: column;
-    align-items: center;
+   // align-items: center;
     min-width:center;
     width: 100%;
     min-height: center;
@@ -48,19 +48,19 @@ export const Places = styled.div`
 export const Images = styled.img`
     margin-top: 15px;
     display: flex;
-    align-items: center;
+    //align-items: center;
     background: #000;
     min-width: 250px;
-    width: 100%;
+    width: 70%;
     min-height: 50px;
-    height: 100%;
+    height: 350%;
     border-radius: 10px;
 `;
 
 export const ContainerTags = styled.div`
     background: #E5E5E5;
-    height: 20%;
-    width: 20%;  
+    height: fit-content;
+    width:fit-content;  
     border-radius: 25px; 
 `;
 

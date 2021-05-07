@@ -33,7 +33,7 @@ export default class PlacesControllers {
 
     public async index(req: Request, res: Response) {
         try {
-            // localhost:3333/places/ESSE_É_O_ID
+           
             const { id } = req.params;
 
             const place = await Places.findByPk(id, {

@@ -113,6 +113,6 @@ yarn start
 
 ### Contato
 | Nome                          | Contato                                |
-| ----------------------------- |:--------------------------------------:| 
+| ----------------------------- |:--------------------------------------:|
 | Gabriela Marangoni Radigonda  | gabrielaradigonda@alunos.utfpr.edu.br  |
 
