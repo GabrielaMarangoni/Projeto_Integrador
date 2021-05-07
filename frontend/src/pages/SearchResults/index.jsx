@@ -13,8 +13,9 @@ const SearchPage = () => {
             lugar: 'Biblioteca Municipal',
             cidade: 'Campo Mourão',
             uf: 'PR',
-            tags: [{ id: 0, tag: 'biblioteca' }],
-            imagem: 'https://cidadeportal.com.br/arquivos/10694cd7af735fcfbd215ab6a238ec74/noticias/cidadeportal-campomourao,15082018161654f01.jpg' 
+            tags: 'biblioteca' ,
+            imagem: 'https://cidadeportal.com.br/arquivos/10694cd7af735fcfbd215ab6a238ec74/noticias/cidadeportal-campomourao,15082018161654f01.jpg',
+            comentario: 'aqui é muito bonito'
         }
     ])
 
@@ -36,14 +37,19 @@ const SearchPage = () => {
                                 <h1>{lugar.lugar}</h1> 
                                 <h2>{lugar.cidade} - {lugar.uf}</h2>
                                 <Images src={lugar.imagem}/>
+                                <ContainerTagaComentarios>
+                                    <h3>TAGS relacionada ao lugar:</h3>
+                                </ContainerTagaComentarios>    
+                                <ContainerTags>
+                                    <h3> {lugar.tags}</h3>
+                                </ContainerTags>
+                                    <h3>Comentários:</h3>
+                                <ContainerTagaComentarios>
+                                    <h3> {lugar.comentario}</h3>
+                                </ContainerTagaComentarios>  
                             </Places>
                         )
                     }) } 
-                    <ContainerTagaComentarios className='break'>
-                        <h3 class='break'>TAGS relacionada ao lugar:</h3>
-
-                        <ContainerTags></ContainerTags>
-                    </ContainerTagaComentarios>    
                 </Content>
            </Container>  
        </>

@@ -38,7 +38,7 @@ export default class TagsControllers {
     // criou um metodo chamado search e pegou os parametros das tags. 
     public async search(req: Request, res: Response) {
         try {
-            // localhost:3333/tags/ESSE_É_O_ID
+           
             const { tags } = req.params;
 
             const tag = await Tags.findAll({

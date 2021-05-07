@@ -12,11 +12,12 @@ const SearchPage = () => {
     const [place, setPlace] = useState([])
     const search = useLocation().search;
     const [selectedTags, setSelectedTags] = useState([]);
-
+    
     const getPlaces = useCallback(async () => {
         const query = new URLSearchParams(search);
         console.log(city)
-       
+        
+        
         if(selectedTags.length > 0) {
             if(!city) {
                 console.log('Buscando somente por tags')
@@ -37,7 +38,7 @@ const SearchPage = () => {
                                     }
                                 }
                             }
-
+                            
                             if(k === places_array.length-1) {
                                 setPlace(okay_google)
                             }
@@ -63,7 +64,7 @@ const SearchPage = () => {
                                     }
                                 }
                             }
-
+                            
                             if(k === places_array.length-1) {
                                 setPlace(okay_google)
                             }
@@ -90,11 +91,11 @@ const SearchPage = () => {
     const goToRegister = useCallback(() => {
         history.push('/cadastro')
     }, [])
-
+    
     useEffect(() => {
         getPlaces()
     }, [])
-
+    
     // aqui toda vez que seleciona ou não, faz a mudança 
     const setCheckedValues = useCallback(async (value, name_tag) => {
         if(value === true) {
@@ -108,7 +109,8 @@ const SearchPage = () => {
             setSelectedTags(new_tags);
         }
     }, [selectedTags])
-
+    
+    
     return (
         <>            
            <HeaderPage searchPage onClick={goToRegister}/>
@@ -120,15 +122,16 @@ const SearchPage = () => {
                     onClick={getPlaces}
                     onChangeCheck={setCheckedValues}
                     undefinedCity={() => setCity(undefined)}
-                />
+                    />
               
                 <Content>
+                    { !place.length ? ( Element ) : ( Element ) }
                     { !!place.length && place.map((lugar) => {
                         return(
                             <Places key={lugar.id}>
                                 <h1>{lugar.name}</h1> 
                                 <h2>{lugar.address ? lugar.address.city : 'Sem cidade'} - {lugar.address ? lugar.address.state : 'Sem estado'}</h2>
-                                <Images src={(lugar.images && lugar.images[0] !== undefined && lugar.images.length !== 0) ? lugar.images[0].image : 'https://wallpapercave.com/wp/wp2754864.jpg'}/>
+                                {<Images src={(lugar.images && lugar.images[0] !== undefined && lugar.images.length !== 0) ? lugar.images[0].image : 'https://wallpapercave.com/wp/wp2754864.jpg'}/>}
                             </Places>
                         )
                     }) }

@@ -1,6 +1,4 @@
 import React, { useCallback, useEffect, useState } from 'react';
-import HeaderPage from '../../components/Header/index';
-import { useHistory } from 'react-router-dom';
 import CityValues from '../../contents/city';
 import { Container, Label, Label2, SelectCidade, SelectUF, ContainerTags, ButtonFilter} from './styles';
 import api from '../../services/api';

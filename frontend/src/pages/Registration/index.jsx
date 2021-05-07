@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useState} from 'react';
+import React, { useCallback, useState} from 'react';
 import { useHistory } from 'react-router-dom';
 import CityValues from '../../contents/city';
 import { FiImage } from 'react-icons/fi';
@@ -52,7 +52,7 @@ const Registration =() =>{
 
     // Essa função (Na verdade é uma constante que é interpretada como função) deve ser mudada toda vez que a cidade muda. O estado já é configurado
     // No proprio elemento Home. 
-    // Dentro do [] precisa estar aquilo que tu está usando na função ou aquilo que a sua função depende
+    // Dentro do [] precisa estar aquilo que está usando na função ou aquilo que a função depende
     const handleCity = useCallback((city) => {
         setCity(city)
     }, [city])
@@ -95,7 +95,7 @@ const Registration =() =>{
         }
     }, [name, tags, address, reference, state, city, commentary, imgs])
 
-    // SÓ PRA DIMINUIR CÓDIGO
+    // SÓ PRA DIMINUIR CÓDIGO - chamando o back
     const registerFunction = useCallback((name, tags, street, reference, state, city, commentary, images) => {
         api.post('/places/total', {
             name,
@@ -109,7 +109,7 @@ const Registration =() =>{
         }).then(() => history.push('/'))
     }, [])
 
-    // Aqui usou o React.Fragment que é algo que n acha no teu html real. ELE NÃO É UMA TAG. Não acha ele no inspect, por exemplo.
+    // Aqui usou o React.Fragment que é algo que n acha no html real. ELE NÃO É UMA TAG. Não acha ele no inspect, por exemplo.
     // Por padrão, o React exige que haja um elemento pai e dentro todos os outros elementos. Por isso, antes, tudo estava dentro do Container.
     // Dessa vez, o Container não tem influência nenhuma no Header por não ter o elemento Header como filho dele
 
@@ -169,7 +169,7 @@ const Registration =() =>{
                         <Row>
                             <Column style={{ width: '100%' }}>
                                 <Label>*Imagem</Label>
-                                { /* Aqui que vamos mexer. Aqui usamos a prpriedade style em uma tag html. Essa propriedade permite que a gente faça uma
+                                { /* Aqui usamos a prpriedade style em uma tag html. Essa propriedade permite que faça uma
                                     estilização no próprio código. A posição é absoluta (ela está acima dos componentes) e não há visibilidade. O próximo passo é
                                     mostrarmos qual lugar tera o efeito disso que foi escondido. Vamos estilizar o label agora */ }
                                 <input type='file' style={{ position: 'absolute', visibility: 'hidden' }} id='image' multiple onChange={handleImageChange}/>

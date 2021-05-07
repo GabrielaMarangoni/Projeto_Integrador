@@ -41,8 +41,7 @@ const Home = () => {
 
     return (
         <>           
-            <HeaderPage home onClick={goToRegister}/>
-          
+            <HeaderPage home onClick={goToRegister}/>          
             
             <LineInputs>
                 <SelectUF onChange = {(e) => handleUF(e.target.value)} value = {state}>
@@ -66,7 +65,7 @@ const Home = () => {
                 <h1>PRINCIPAIS PONTOS JÁ ADICIONADOS</h1>
             </LineH1>
           
-           <CarrosselDistancia>
+            <CarrosselDistancia>
             <CarrosselCorpo></CarrosselCorpo>
             </CarrosselDistancia>
        </>

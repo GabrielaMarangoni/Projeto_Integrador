@@ -30,7 +30,7 @@ describe('CreateTotalPlace', () => {
         );
     })
 
-    it('should be create a total place of place', async () => {
+    it('should be create a total place', async () => {
         await expect(
             createTotalPlaceService.execute({
                 name: 'Jardim',

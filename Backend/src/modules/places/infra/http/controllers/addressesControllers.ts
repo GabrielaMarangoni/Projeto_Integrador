@@ -7,7 +7,7 @@ const Addresses = require('../../sequelize/entities/addresses.js');
 export default class AddressesControllers {
     public async index(req: Request, res: Response) {
         try {
-            // localhost:3333/addresses/ESSE_É_O_ID
+           
             const { id } = req.params;
 
             const address = await Addresses.findByPk(id, {

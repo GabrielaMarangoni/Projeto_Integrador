@@ -1,6 +1,4 @@
 import styled from 'styled-components';
-
-
 // Aqui o fit-content significa que o height é igual ao máximo dos elementos filhos, 
 // no caso: Button e Logo
 export const Header = styled.header`

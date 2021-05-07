@@ -7,7 +7,7 @@ const Images = require('../../sequelize/entities/images.js');
 export default class ImagesControllers {
     public async index(req: Request, res: Response) {
         try {
-            // localhost:3333/images/ESSE_É_O_ID
+           
             const { id } = req.params;
 
             const images = await Images.findByPk(id, {

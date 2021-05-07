@@ -8,7 +8,7 @@ import { Logo, Header, ButtonHeader, ButtonReturn, Button } from './styles';
 // O props significa propriedades que são passadas ao seu componente
 const HeaderPage =(props) =>{
     const history = useHistory();
-    // É interessante tu usar esse mesmo componente e mudar seus elementos de acordo com qual tela ele será exibido.
+    // É interessante usar esse mesmo componente e mudar seus elementos de acordo com qual tela ele será exibido.
     // O objetivo é tirar o botão quando for a tela de registro e colocar quando não for, tudo através desse componente
     return (
         <Header>
