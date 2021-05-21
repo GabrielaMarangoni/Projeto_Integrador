@@ -18,9 +18,6 @@ const Home = () => {
         setState(estado)
     }, [state])
 
-    // Essa função (Na verdade é uma constante que é interpretada como função) deve ser mudada toda vez que a cidade muda. O estado já é configurado
-    // No proprio elemento Home. 
-    // Dentro do [] precisa estar aquilo que está usando na função ou aquilo que a função depende
     const handleCity = useCallback((city) => {
         setCity(city)
     }, [city])
