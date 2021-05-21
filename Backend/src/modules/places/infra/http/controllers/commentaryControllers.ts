@@ -1,19 +1,19 @@
 import { Request, Response } from 'express';
-import CreateAddressesService from '../../../services/CreateAddressService';
-import AddressesRepository from '../../repositories/AddressesRepository';
+import CreateCommentaryService from '../../../services/CreateCommentaryService';
+import CommentaryRepository from '../../repositories/CommentaryRepository';
 import PlacesRepository from '../../repositories/PlacesRepository';
-const Addresses = require('../../sequelize/entities/addresses.js');
+const Commentary = require('../../sequelize/entities/commentary.js');
 
 export default class AddressesControllers {
     public async index(req: Request, res: Response) {
-        try {
+        try {           
             const { id } = req.params;
 
-            const address = await Addresses.findByPk(id, {
+            const commentary1 = await Commentary.findByPk(id, {
                 include: { association: 'places' }
             });
 
-            return res.json(address);
+            return res.json(commentary1);
         } catch (err) {
             return res.status(400).json({ error: err })
         }
@@ -21,11 +21,11 @@ export default class AddressesControllers {
     
     public async all(req: Request, res: Response) {
         try {
-            const address = await Addresses.findAll({
+            const commentary1 = await Commentary.findAll({
                 include: { association: 'places' }
             });
 
-            return res.json(address);
+            return res.json(commentary1);
         } catch (err) {
             return res.status(400).json({ error: err })
         }
@@ -34,21 +34,18 @@ export default class AddressesControllers {
     public async create(req: Request, res: Response) {
         try {
             const { places_id } = req.params;
-            const { city, state, street, reference } = req.body;
+            const { commentary } = req.body;
 
-            const createAddressesService = new CreateAddressesService(
-                new AddressesRepository(), 
+            const createCommentaryService = new CreateCommentaryService(
+                new CommentaryRepository(), 
                 new PlacesRepository()
             )
-            const address = await createAddressesService.execute({
-                city,
-                state,
-                street,
-                reference,
+            const commentary1 = await createCommentaryService.execute({
+                commentary,
                 places_id
             })
 
-            return res.json(address);
+            return res.json(commentary1);
         } catch (err) {
             return res.status(400).json({ error: err.message })
 

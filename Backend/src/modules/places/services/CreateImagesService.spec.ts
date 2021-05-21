@@ -7,7 +7,7 @@ let fakePlacesRepository: FakesPlacesRepository;
 let createImageService: CreateImagesService;
 
 describe('CreateImages', () => {
-    // Aqui declaramos o que está no constructor de cada service
+    // Aqui foi declarado o que está no constructor de cada service
     beforeEach(() => {
         fakeImagesRepository = new FakesImagesRepository();
         fakePlacesRepository = new FakesPlacesRepository();
