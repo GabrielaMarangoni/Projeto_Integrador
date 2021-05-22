@@ -2,8 +2,9 @@ import React, { useCallback, useState } from 'react';
 import HeaderPage from '../../components/Header/index';
 import SearchBar from '../../components/SearchBar/index';
 import { useHistory } from 'react-router-dom';
+import { FiImage } from 'react-icons/fi'
 
-import { Container, Content, Images, Places, ContainerTags, ContainerTagaComentarios} from './styles';
+import { Container, Content} from './styles';
 
 const SearchPage = () => {
     const history = useHistory();
@@ -33,21 +34,72 @@ const SearchPage = () => {
                 <Content>
                     { place.map((lugar) => {
                         return(
-                            <Places key={lugar.id}>
+                            <div>
                                 <h1>{lugar.lugar}</h1> 
-                                <h2>{lugar.cidade} - {lugar.uf}</h2>
-                                <Images src={lugar.imagem}/>
-                                <ContainerTagaComentarios>
-                                    <h3>TAGS relacionada ao lugar:</h3>
-                                </ContainerTagaComentarios>    
-                                <ContainerTags>
-                                    <h3> {lugar.tags}</h3>
-                                </ContainerTags>
-                                    <h3>Comentários:</h3>
-                                <ContainerTagaComentarios>
-                                    <h3> {lugar.comentario}</h3>
-                                </ContainerTagaComentarios>  
-                            </Places>
+                                <h3>{lugar.cidade} - {lugar.uf}</h3>
+                                <img src={lugar.imagem}/>
+                                <div className="add-image">
+                                    <button>
+                                        <FiImage/>
+                                        <span>Adicionar imagem</span>
+                                    </button>
+                                </div>
+                                <h2>TAGS relacionada ao lugar:</h2>
+                                <div className="tags-div">
+                                    <div className="tag">
+                                        <span>{lugar.tags}</span>
+                                    </div>
+                                    <div className="tag">
+                                        <span>{lugar.tags}</span>
+                                    </div>
+                                    <div className="tag">
+                                        <span>{lugar.tags}</span>
+                                    </div>
+                                    <div className="tag">
+                                        <span>{lugar.tags}</span>
+                                    </div>
+                                </div>
+                                <h2>Comentários:</h2>
+                                <div className="comment">
+                                    <div className="add-comment">
+                                        <textarea></textarea>
+                                        <div className="submit-comment-div">
+                                            <button>Enviar</button>
+                                        </div>
+                                    </div>
+                                    <div className="comment-text">
+                                        <div className="header">
+                                            <span>Adicionado em 21 de maio</span>
+                                        </div>
+                                        <p>teste</p>
+                                    </div>
+                                    <div className="comment-text">
+                                        <div className="header">
+                                            <span>Adicionado em 21 de maio</span>
+                                        </div>
+                                        <p> teste </p>
+                                    </div>
+                                    <div className="comment-text">
+                                        <div className="header">
+                                            <span>Adicionado em 21 de maio</span>
+                                        </div>
+                                        <p> teste </p>
+                                    </div>
+                                    <div className="comment-text">
+                                        <div className="header">
+                                            <span>Adicionado em 21 de maio</span>
+                                        </div>
+                                        <p>teste</p>
+                                    </div>
+                                    <div className="comment-text">
+                                        <div className="header">
+                                            <span>Adicionado em 21 de maio</span>
+                                        </div>
+                                        <p>teste </p>
+                                    </div>
+                                </div>
+                               
+                            </div>
                         )
                     }) } 
                 </Content>

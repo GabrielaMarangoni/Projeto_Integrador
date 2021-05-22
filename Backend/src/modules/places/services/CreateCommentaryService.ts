@@ -30,7 +30,7 @@ class CreateCommentaryService {
             places_id
          });
 
-        return commentary1;
+        return { id: commentary1.id }
     }
 }
 
