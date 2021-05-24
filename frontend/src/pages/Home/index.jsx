@@ -18,9 +18,6 @@ const Home = () => {
         setState(estado)
     }, [state])
 
-    // Essa função (Na verdade é uma constante que é interpretada como função) deve ser mudada toda vez que a cidade muda. O estado já é configurado
-    // No proprio elemento Home. 
-    // Dentro do [] precisa estar aquilo que tu está usando na função ou aquilo que a sua função depende
     const handleCity = useCallback((city) => {
         setCity(city)
     }, [city])
@@ -31,14 +28,12 @@ const Home = () => {
 
     const goToSearchPage = useCallback(() => {
         if(city !== undefined) {
-            history.push(`/pesquisa?cidade=${city}`)
+            history.push(`/?cidade=${city}`)
         } else {
-            history.push(`/pesquisa`)
+            history.push(`/`)
         }
     }, [city])
    
-
-
     return (
         <>           
             <HeaderPage home onClick={goToRegister}/>          

@@ -7,7 +7,7 @@ let fakePlacesRepository: FakesPlacesRepository;
 let createTagService: CreateTagsService;
 
 describe('CreateTag', () => {
-    // Aqui declaramos o que está no constructor de cada service
+    // Aqui foi declarado o que está no constructor de cada service
     beforeEach(() => {
         fakeTagsRepository = new FakesTagsRepository();
         fakePlacesRepository = new FakesPlacesRepository();

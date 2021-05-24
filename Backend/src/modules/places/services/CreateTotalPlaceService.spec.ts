@@ -13,7 +13,7 @@ let fakePlacesRepository: FakesPlacesRepository;
 let createTotalPlaceService: CreateTotalPlaceService;
 
 describe('CreateTotalPlace', () => {
-    // Aqui declaramos o que está no constructor de cada service
+    // Aqui foi declarado o que está no constructor de cada service
     beforeEach(() => {
         fakeCommentaryRepository = new FakesCommentaryRepository();
         fakeTagsRepository = new FakesTagsRepository();

@@ -95,6 +95,10 @@ const SearchPage = () => {
     useEffect(() => {
         getPlaces()
     }, [])
+
+    const goToResults = useCallback((place_id) => {
+        history.push(`/resultados/${place_id}`)
+    }, [])
     
     // aqui toda vez que seleciona ou não, faz a mudança 
     const setCheckedValues = useCallback(async (value, name_tag) => {
@@ -131,7 +135,10 @@ const SearchPage = () => {
                             <Places key={lugar.id}>
                                 <h1>{lugar.name}</h1> 
                                 <h2>{lugar.address ? lugar.address.city : 'Sem cidade'} - {lugar.address ? lugar.address.state : 'Sem estado'}</h2>
-                                {<Images src={(lugar.images && lugar.images[0] !== undefined && lugar.images.length !== 0) ? lugar.images[0].image : 'https://wallpapercave.com/wp/wp2754864.jpg'}/>}
+                                {
+                                    <Images onClick={() => goToResults(lugar.id)}
+                                    src={(lugar.images && lugar.images[0] !== undefined && lugar.images.length !== 0) ? lugar.images[0].image : ''}/>
+                                }
                             </Places>
                         )
                     }) }

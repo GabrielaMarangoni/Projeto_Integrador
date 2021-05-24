@@ -7,7 +7,6 @@ const Tags = require('../../sequelize/entities/tags.js');
 export default class TagsControllers {
     public async index(req: Request, res: Response) {
         try {
-            // localhost:3333/tags/ESSE_É_O_ID
             const { id } = req.params;
 
             const tag = await Tags.findByPk(id, {

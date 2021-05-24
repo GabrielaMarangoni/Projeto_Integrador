@@ -1,53 +1,92 @@
-import React, { useCallback, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import HeaderPage from '../../components/Header/index';
-import SearchBar from '../../components/SearchBar/index';
-import { useHistory } from 'react-router-dom';
+import { useHistory, useParams } from 'react-router-dom';
+import { FiImage } from 'react-icons/fi'
+import CarrosselCorpo from '../../components/Carrossel/index';
+import api from '../../services/api';
 
-import { Container, Content, Images, Places, ContainerTags, ContainerTagaComentarios} from './styles';
+import { Container, Content} from './styles';
 
 const SearchPage = () => {
     const history = useHistory();
-    const [place, setPlace] = useState([
-        {
-            id: 1,
-            lugar: 'Biblioteca Municipal',
-            cidade: 'Campo Mourão',
-            uf: 'PR',
-            tags: 'biblioteca' ,
-            imagem: 'https://cidadeportal.com.br/arquivos/10694cd7af735fcfbd215ab6a238ec74/noticias/cidadeportal-campomourao,15082018161654f01.jpg',
-            comentario: 'aqui é muito bonito'
-        }
-    ])
+    const {placeId: place_id} = useParams();
+    const [place, setPlace] = useState([]);
+    const [newCommentary, setNewCommentary] = useState('');
+    const getPlaces = useCallback(async () => {
+
+        const response = await api.get(`/places/one/${place_id}`);
+         setPlace([response.data])         
+    }, [place_id])
+
+    useEffect(() => {
+        getPlaces()
+    }, [place_id])
+
 
     const goToRegister = useCallback(() => {
         history.push('/cadastro')
     }, [])
 
+    const saveCommentary = async () => {
+       await api.post(`/commentary/${place_id}`, {commentary:newCommentary});
+        setNewCommentary('')
+        getPlaces()
+    }
+
+    useEffect(()=>{
+        console.log(newCommentary)
+    }, [newCommentary])
     return (
         <>            
            <HeaderPage searchPage onClick={goToRegister}/>
 
            <Container>
-                <SearchBar/>
+               
               
                 <Content>
                     { place.map((lugar) => {
                         return(
-                            <Places key={lugar.id}>
-                                <h1>{lugar.lugar}</h1> 
-                                <h2>{lugar.cidade} - {lugar.uf}</h2>
-                                <Images src={lugar.imagem}/>
-                                <ContainerTagaComentarios>
-                                    <h3>TAGS relacionada ao lugar:</h3>
-                                </ContainerTagaComentarios>    
-                                <ContainerTags>
-                                    <h3> {lugar.tags}</h3>
-                                </ContainerTags>
-                                    <h3>Comentários:</h3>
-                                <ContainerTagaComentarios>
-                                    <h3> {lugar.comentario}</h3>
-                                </ContainerTagaComentarios>  
-                            </Places>
+                            <div>
+                                <h1>{lugar.name}</h1> 
+                                <h3>{lugar.address.city} - {lugar.address.state}</h3>
+                                <CarrosselCorpo images={lugar.images}/>
+                                <div className="add-image">
+                                    <button>
+                                        <FiImage/>
+                                        <span>Adicionar imagem</span>
+                                    </button>
+                                </div>
+                                <h2>TAGS relacionada ao lugar:</h2>
+                                <div className="tags-div">
+                                    {
+                                        lugar.tags.map((tag)=>(
+                                            <div className="tag" key={tag.id}>
+                                                <span>{tag.tag}</span>
+                                            </div>
+                                        ))
+                                    }
+                                </div>
+                                <h2>Comentários:</h2>
+                                <div className="comment">
+                                    <div className="add-comment">
+                                        <textarea onChange={(ev) => setNewCommentary(ev.target.value)}value={newCommentary}></textarea>
+                                        <div className="submit-comment-div">
+                                            <button onClick={saveCommentary}>Enviar</button>
+                                        </div>
+                                    </div>
+                                    { lugar.commentary.map((commentary)=>(
+                                        <div key={commentary.id} className="comment-text">
+                                            <div className="header">
+                                                <span>Adicionado em {commentary.createdAt}</span>
+                                            </div>
+                                            <p>{commentary.commentary}</p>
+                                        </div>   
+                                    ))
+
+                                    }
+                                </div>
+                               
+                            </div>
                         )
                     }) } 
                 </Content>
