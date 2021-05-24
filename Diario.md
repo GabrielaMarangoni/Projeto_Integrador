@@ -275,5 +275,51 @@ Quais foram os impedimentos que me fizeram não concluir parte das minhas tarefa
 - não teve impedimentos.
 
 
+"VOLTANDO DE FÉRIAS DA EMPRESA"
+
+
+## Reunião 12
+
+### Data: 21/05/2021
+
+Na reunião de hoje foi discutido sobre o projeto e seu andamento. 
+Até o momento foi feito o back-end da issue 6 e 7 e arrumado o front-end.
+Proximo passo fazer a integração.
+
+Participante: Gabriela Marangoni 
+
+
+### Gabriela 
+O que eu fiz até ontém? 
+- Terminei o back-end e o front-end do projeto.
+
+O que eu farei até a próxima reunião diária?
+- Farei a integração das telas e implementar o adicionar comentário.
+
+Quais foram os impedimentos que me fizeram não concluir parte das minhas tarefas? 
+- não teve impedimentos.
+
+
+## Reunião 13
+
+### Data: 24/05/2021
+
+Na reunião de hoje foi discutido sobre o projeto e seu andamento. 
+Até o momento foi feito a integração do back com o front e a implementação de adicionar o comentário.
+Para próxima reunião final, que será amanha, será implementado a parte de adicionar mais imagens ao local selecionado.
+
+Participante: Gabriela Marangoni 
+
+
+### Gabriela 
+O que eu fiz até ontém? 
+- Terminei a integração das telas e de implementar o adicionar comentário.
+
+O que eu farei até a próxima reunião diária?
+- Terminarei de implementar a parte de adicionar mais imagens ao local selecionado
+
+Quais foram os impedimentos que me fizeram não concluir parte das minhas tarefas? 
+- não teve impedimentos.
+
 
 
