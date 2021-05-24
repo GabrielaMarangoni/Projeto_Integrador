@@ -60,7 +60,7 @@ const Registration =() =>{
 
     const register = useCallback(async () => {
         if(state && city && name && tags && commentary && imgs) {
-            alert('Estamos fazendo o seu cadastro, por favor aguarde')
+            alert('Estamos fazendo o seu cadastro, por favor aguarde.')
             let imgsUrl = '';
             for(var a = 0; a < imgs.length; a++) {
                 const fileHash = crypto.lib.WordArray.random(10);
@@ -79,7 +79,7 @@ const Registration =() =>{
                         if(file.location !== undefined) {
                             imgsUrl = `${imgsUrl}, ${file.location}`
 
-                            if(imgsUrl.split(',').length === imgs.length-1) {
+                            if(imgsUrl.split(',').length === imgs.length) {
                                 registerFunction(name, tags, address, reference, state, city, commentary, imgsUrl)
                             }
                         }

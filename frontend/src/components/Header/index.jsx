@@ -33,6 +33,12 @@ const HeaderPage =(props) =>{
                     CADASTRE UM PONTO DE INTERESSE
                 </ButtonHeader>
             ) }
+
+            { props.searchResults && (
+                <ButtonHeader onClick={props.onClick}>
+                    CADASTRE UM PONTO DE INTERESSE
+                </ButtonHeader>
+            ) }
         </Header>
     )
 }
