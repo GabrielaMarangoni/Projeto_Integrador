@@ -322,4 +322,24 @@ Quais foram os impedimentos que me fizeram não concluir parte das minhas tarefa
 - não teve impedimentos.
 
 
+## Reunião 14
+
+### Data: 25/05/2021
+
+Na reunião de hoje foi celebrado o final do projeto com muita gloria e louvor.
+Projeto concluído.
+
+Participante: Gabriela Marangoni 
+
+
+### Gabriela 
+O que eu fiz até ontém? 
+- Terminei  de implementar a parte de adicionar mais imagens ao local selecionado.
+
+O que eu farei até a próxima reunião diária?
+- Nada, pois o projeto chgeou ao fim.
+
+Quais foram os impedimentos que me fizeram não concluir parte das minhas tarefas? 
+- não teve impedimentos.
+
 
