@@ -1,12 +1,8 @@
 import { Carousel } from 'antd';
-import { useCallback, useEffect, useState } from 'react';
-
-import { Carrossel, Name } from '../../components/Carrossel/styled';
-import api from '../../services/api';
+import { Carrossel} from '../../components/Carrossel/styled';
 
 const CarrosselCorpo = ({images}) => {
     
-
     return (
         <Carousel autoplay>
             { images.map(image => (

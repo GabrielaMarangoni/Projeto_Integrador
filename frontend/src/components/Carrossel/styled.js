@@ -23,19 +23,7 @@ export const Carrossel = styled.div`
   } */
 `;
 
-export const Name = styled.div`
-  display: flex;
-  flex-direction: column;
-  width: fit-content;
-  position: absolute;
-  height: fit-content;
-  padding: 10px 30px;
-  background: #fff;
-  border-top-left-radius: 12px;
-  h1, h2 {
-    margin: 0;
-  }
-`;
+
 
 export const CarrosselDistancia = styled.div`
     padding: 5px 300px 0 300px;
