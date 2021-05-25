@@ -23,8 +23,6 @@ const Registration =() =>{
 
     const [name, setName] = useState('');
     const [tags, setTags] = useState('');
-    const [address, setAddress] = useState('');
-    const [reference, setReference] = useState('');
     const [commentary, setCommentary] = useState('');
     const [state, setState] = useState();
     const [city, setCity] = useState();
@@ -71,7 +69,7 @@ const Registration =() =>{
                         imgsUrl = `${file.location}`
     
                         if(imgs.length === 1) {
-                            registerFunction(name, tags, address, reference, state, city, commentary, imgsUrl)
+                            registerFunction(name, tags, state, city, commentary, imgsUrl)
                         }
                     })
                 } else {
@@ -80,7 +78,7 @@ const Registration =() =>{
                             imgsUrl = `${imgsUrl}, ${file.location}`
 
                             if(imgsUrl.split(',').length === imgs.length) {
-                                registerFunction(name, tags, address, reference, state, city, commentary, imgsUrl)
+                                registerFunction(name, tags, state, city, commentary, imgsUrl)
                             }
                         }
                     })
@@ -90,15 +88,13 @@ const Registration =() =>{
         } else {
             alert('Por favor, preencha todos os campos necessários (*).')
         }
-    }, [name, tags, address, reference, state, city, commentary, imgs])
+    }, [name, tags, state, city, commentary, imgs])
 
-    const registerFunction = useCallback((name, tags, street, reference, state, city, commentary, images) => {
+    const registerFunction = useCallback((name, tags, state, city, commentary, images) => {
         api.post('/places/total', {
             name,
             city,
             state,
-            street,
-            reference,
             tags,
             images,
             commentary
@@ -120,10 +116,7 @@ const Registration =() =>{
                             <Column>
                                 <Label>*Nome do lugar</Label>
                                 <InputCadastro value={name} onChange={(e) => setName(e.target.value)}/>
-
-                                <Label>Endereço</Label>
-                                <InputCadastro value={address} onChange={(e) => setAddress( e.target.value)}/> 
-
+                                
                                 <Label>*Estado</Label>
                                 <SelectUF onChange = {(e) => handleUF(e.target.value)} value = {state}>
                                     <option key = 'init'>Selecione o Estado</option>
@@ -137,10 +130,7 @@ const Registration =() =>{
                                 <Label>*Tags sobre o lugar (separe por vírgula)</Label>
                                 { /* toUpperCase() deixa em caps lock */ }
                                 <InputCadastro value={tags} onChange={(e) => setTags(e.target.value.toUpperCase())}/>
-
-                                <Label>Número/Complemento</Label>
-                                <InputCadastro value={reference} onChange={(e) => setReference(e.target.value)}/>
-
+                               
                                 <Label>*Cidade</Label>
                                 <SelectPesquisar  onChange = {(e) => handleCity(e.target.value)} value = {city}>
                                     <option key = 'init'>Selecione a Cidade</option>

@@ -45,15 +45,16 @@ export const Content = styled.div`
             width: 100%;
            
 
-            button {
+            div {
                 display: flex;
                 align-items: center;
                 padding: 5px 15px;
-                margin-left: auto;
+               // margin-left: auto;
                 background: #2e8d7f;
                 color: #2F4F4F;
                 cursor: pointer;
                 user-select: none;
+                width: fit-content;
 
                 transition: all .2s;
 

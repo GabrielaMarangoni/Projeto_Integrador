@@ -137,7 +137,7 @@ const SearchPage = () => {
                                 <h2>{lugar.address ? lugar.address.city : 'Sem cidade'} - {lugar.address ? lugar.address.state : 'Sem estado'}</h2>
                                 {
                                     <Images onClick={() => goToResults(lugar.id)}
-                                    src={(lugar.images && lugar.images[0] !== undefined && lugar.images.length !== 0) ? lugar.images[0].image : ''}/>
+                                    src={(lugar.images && lugar.images[0] !== undefined && lugar.images.length !== 0) ? lugar.images[0].image : 'https://wallpapercave.com/wp/wp4153934.jpg'}/>
                                 }
                             </Places>
                         )
