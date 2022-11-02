@@ -34,7 +34,7 @@ O Turistando vai ser uma plataforma com o mesmo intuito de uma rede social, mas 
 ## Stack 
 - React (Front-end)
 - Node JS (Back-end)
-- MSQL (Back-end)
+- MYSQL (Back-end)
 
 ## Dependências do Front-end
 - Styled Components
